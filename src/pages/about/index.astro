@@ -1,0 +1,19 @@
+---
+import { BrandGithub, BrandLinkedin, Mail, BrandTelegram } from 'tabler-icons-react'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title='About | Ricardo CHu'>
+  <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>
+    About
+  </h1>
+  <div class=''>
+    <a href='https://github.com/kypexfly' class='flex gap-3'><BrandGithub /> Github</a>
+    <a href='mailto:rczgraphics@live.com' class='flex gap-3'><Mail /> rczgraphics@live.com</a>
+    <a href='https://www.linkedin.com/in/ricardo-chu-zheng/' class='flex gap-3'
+      ><BrandLinkedin /> LinkedIn</a
+    >
+    <a href='https://telegram.me/ricardo_chu' class='flex gap-3'><BrandTelegram /> Telegram</a>
+  </div>
+  <p class='my-3 leading-relaxed text-gray-500'>Graduate student in Electrical Engineering.</p>
+</BaseLayout>
