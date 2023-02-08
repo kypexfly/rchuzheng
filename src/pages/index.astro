@@ -1,34 +1,65 @@
 ---
-import { BrandGithub, Mail, BrandLinkedin, BrandTelegram } from 'tabler-icons-react'
+import Contact from '../components/Contact.astro'
 import Layout from '../layouts/BaseLayout.astro'
 ---
 
 <Layout title='Ricardo Chu'>
-  <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>
-    Hi, I'm <span class='text-gradient'>Ricardo!</span>
-  </h1>
-  <p class='my-3 leading-relaxed'>Fullstack Web Developer. 💖 React and it's ecosystem!</p>
+  <header class='flex items-center gap-5 mb-6 justify-center sm:justify-start'>
+    <img src='/assets/ricardo-chu.png' height={80} width={80} class='rounded-full' />
+    <div>
+      <h1 class='text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>
+        Hi, I'm <span class='text-gradient'>Ricardo!</span>
+      </h1>
+      <p class='my-3 leading-relaxed text-gray-700 dark:text-gray-300'>
+        Fullstack Web Developer. 💖 React and it's ecosystem!
+      </p>
+    </div>
+  </header>
 
-  <h3 class='my-3 font-semibold text-3xl'>Contact</h3>
-  <ul class='grid grid-cols-1 sm:grid-cols-2 gap-6 my-6'>
-    <a href='https://github.com/kypexfly' class='flex gap-3'><BrandGithub /> Github</a>
-    <a href='mailto:rczgraphics@live.com' class='flex gap-3'><Mail /> rczgraphics@live.com</a>
-    <a href='https://telegram.me/ricardo_chu' class='flex gap-3'><BrandTelegram /> Telegram</a>
-    <a href='https://www.linkedin.com/in/ricardo-chu-zheng/' class='flex gap-3'
-      ><BrandLinkedin /> LinkedIn</a
-    >
-  </ul>
+  <hr class='my-10 dark:border-gray-800' />
 
-  <h3 class='my-3 font-semibold text-3xl'>Tecnologies</h3>
-  <ul>
-    <li>React, Astro, Next</li>
-    <li>Node, Express, Strapi</li>
-    <li>MongoDB, PostgreSQL, Prisma</li>
-    <li>Bootstrap, TailwindCSS</li>
-    <li>JSON Web Token (JWT)</li>
-    <li>NPM, Git & GitHub</li>
-    <li>Docker</li>
-  </ul>
+  <section>
+    <h3 class='my-3 font-semibold text-3xl text-center sm:text-left'>Favorite Tecnologies</h3>
+    <p class='my-3 leading-relaxed text-gray-700 dark:text-gray-300 text-center sm:text-left'>
+      Technologies I feel comfortable and happy to work with.
+    </p>
+    <ul class='flex flex-wrap gap-3 my-6 justify-center'>
+      <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
+        <img width={40} height={40} src='https://skillicons.dev/icons?i=react' alt='React' /> React
+      </li>
+      <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
+        <img width={40} height={40} src='https://skillicons.dev/icons?i=astro' alt='Astro' /> Astro
+      </li>
+      <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
+        <img width={40} height={40} src='https://skillicons.dev/icons?i=postgresql' alt='PostgreSQL' /> PostgreSQL
+      </li>
+      <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
+        <img width={40} height={40} src='https://skillicons.dev/icons?i=express' alt='Express' /> Express
+      </li>
+      <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
+        <img width={40} height={40} src='https://skillicons.dev/icons?i=typescript' alt='Typescript' /> Typescript
+      </li>
+      <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
+        <img width={40} height={40} src='https://skillicons.dev/icons?i=python' alt='Python' /> Python
+      </li>
+    </ul>
+
+    <h3 class='my-3 font-semibold text-3xl text-center sm:text-left'>Other Tecnologies</h3>
+    <ul class="my-3 flex flex-col flex-wrap h-40 text-center sm:text-left">
+      <li>Next.js</li>
+      <li>Node.js</li>
+      <li>Strapi</li>
+      <li>MongoDB</li>
+      <li>Prisma</li>
+      <li>Bootstrap</li>
+      <li>TailwindCSS</li>
+      <li>JSON Web Token (JWT)</li>
+      <li>NPM</li>
+      <li>Git</li>
+      <li>GitHub</li>
+      <li>Docker</li>
+    </ul>
+  </section>
 </Layout>
 
 <style>
@@ -38,30 +69,5 @@ import Layout from '../layouts/BaseLayout.astro'
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
   }
 </style>
