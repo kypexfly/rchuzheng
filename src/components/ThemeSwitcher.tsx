@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {Brightness2, Moon} from 'tabler-icons-react'
+import { BrightnessUp } from 'tabler-icons-react'
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
@@ -18,6 +18,8 @@ export default function ThemeSwitcher() {
   }, [theme])
 
   return (
-    <button onClick={handleClick}>{theme === "light" ? <Moon/> : <Brightness2/>}</button>
+    <button onClick={handleClick}>
+      <BrightnessUp />
+    </button>
   )
 }

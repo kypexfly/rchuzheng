@@ -1,8 +1,12 @@
 ---
+import type { Frontmatter } from '../types'
 import BaseLayout from './BaseLayout.astro'
 
+interface Props {
+  frontmatter: Frontmatter
+}
 const {
-  frontmatter: { title, tags, author, image, pubDate },
+  frontmatter: { title, tags, image, pubDate },
 } = Astro.props
 
 const date = new Date(pubDate).toLocaleDateString('en-US', {
@@ -14,6 +18,14 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
 
 <BaseLayout title={title + ' | Ricardo Chu'}>
   <header class='w-full mx-auto space-y-4 text-center'>
+    {
+      image.url && (
+        <div class='max-w-screen-lg mx-auto mb-16 overflow-hidden rounded-none lg:rounded-lg'>
+          <img class='w-full' src={image.url} alt={image.alt} />
+        </div>
+      )
+    }
+    
     <h1 class='text-4xl font-bold leading-tight md:text-5xl'>
       {title}
     </h1>
@@ -21,54 +33,65 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
       {tags.map((tag) => <span>#{tag}</span>)}
     </p>
     <p class='text-sm dark:text-gray-400'>
-      by
-      <a
-        rel='noopener noreferrer'
-        href='/'
-        target='_blank'
-        class='underline dark:text-violet-400 whitespace-nowrap'
-      >
-        <span itemprop='name'>{author}</span>
-      </a> on
       <time datetime={pubDate}>{date}</time>
     </p>
-    <div class='max-w-screen-lg mx-auto mt-16 overflow-hidden rounded-none lg:rounded-lg'>
-      <img class='w-full' src={image.url} alt={image.alt} />
-    </div>
   </header>
 
-  <article class='px-12 my-12'>
+  <article class='px-12 my-12 markdown'>
     <slot />
   </article>
 </BaseLayout>
 
-<style is:global>
-  /* @apply leading mb-6 text-gray-300 */
+<style is:inline>
   article {
     line-height: 1.5;
     font-size: 17px;
-    color: rgb(55, 65, 81)
+    color: rgb(55, 65, 81);
   }
   .dark article {
-    color: rgb(209, 213, 219)
+    color: rgb(209, 213, 219);
   }
   p {
     margin: 1.5rem 0;
   }
   h2 {
-    font-size: 2.25rem /* 20px */;
-    line-height: 2.5rem /* 28px */;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
     font-weight: 600;
     margin: 1.5rem 0;
   }
-  h3, h4, h5, h6 {
-    font-size: 1.25rem /* 20px */;
-    line-height: 2.5rem /* 28px */;
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.25rem;
+    line-height: 2.5rem;
     font-weight: 600;
     margin: 1.5rem 0;
   }
   ul {
     padding-left: 2em;
     list-style-type: disc;
+  }
+  article :not(pre) code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    white-space: break-spaces;
+    background-color: rgb(209, 213, 219);
+    border-radius: 6px;
+  }
+  .dark article :not(pre) code {
+    background-color: rgb(55, 65, 81);
+    color: rgb(209, 213, 219);
+  }
+  pre {
+    padding: 1.5em;
+    border-radius: 0.475rem;
+    font-size: 14px;
+  }
+  article a {
+    color: rgb(37, 99, 235);
+    text-decoration: underline;
   }
 </style>

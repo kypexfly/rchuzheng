@@ -1,7 +1,8 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro'
 import Layout from '../layouts/BaseLayout.astro'
-const allProjects = await Astro.glob('./projects/*.md')
+import type { Frontmatter } from '../types';
+const allProjects = await Astro.glob<Frontmatter>('./projects/*.md')
 ---
 
 <Layout title='Projects | Ricardo Chu'>
@@ -17,7 +18,7 @@ const allProjects = await Astro.glob('./projects/*.md')
   <ul class='grid grid-cols-1 gap-5 md:grid-cols-2 sm:gap-8'>
     {
       allProjects.map((project) => {
-        const { title, description, image, pubDate } = project.frontmatter
+        const { title, description, image, pubDate, tags } = project.frontmatter
         return (
           <ProjectCard
             title={title}
@@ -25,6 +26,7 @@ const allProjects = await Astro.glob('./projects/*.md')
             image={image}
             pubDate={pubDate}
             url={project.url}
+            tags={tags}
           />
         )
       })

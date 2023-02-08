@@ -1,13 +1,14 @@
 ---
-const { title, description, url, image, pubDate } = Astro.props
-const date = new Date(pubDate).toLocaleDateString('en-US', {
-  month: 'long',
-  day: '2-digit',
-  year: 'numeric',
-})
+import type { Frontmatter } from '../types'
+interface Props extends Frontmatter {
+  url: string | undefined
+}
+const { title, description, url, image, tags } = Astro.props
 ---
 
-<article class='overflow-hidden rounded-lg shadow transition-all duration-200 ease-in-out transform hover:shadow-lg hover:scale-105 dark:shadow-gray-700/25'>
+<article
+  class='overflow-hidden rounded-lg shadow transition-all duration-200 ease-in-out transform hover:shadow-lg hover:scale-105 dark:shadow-gray-700/25'
+>
   <a href={url}>
     <img alt={image.alt} src={image.url} class='h-56 w-full object-cover' />
 
@@ -19,6 +20,15 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
       <p class='mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400 line-clamp-3'>
         {description}
       </p>
+      <div class='flex gap-1 mt-3'>
+        {
+          tags.map((tag) => (
+            <span class='text-sm bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded text-gray-600 dark:text-gray-400'>
+              {tag}
+            </span>
+          ))
+        }
+      </div>
     </div>
   </a>
 </article>
