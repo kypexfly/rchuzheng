@@ -1,33 +1,25 @@
 ---
 import { ArrowNarrowRight } from 'tabler-icons-react'
+const { title, description, pubDate, url } = Astro.props
+const date = new Date(pubDate).toLocaleDateString('en-US', {
+  month: 'long',
+  day: '2-digit',
+  year: 'numeric',
+})
 ---
 
-<div class='flex flex-col col-span-12 divide-y lg:col-span-6 divide-gray-200 dark:divide-gray-800'>
-  <div class='pt-6 pb-4 space-y-2'>
-    <span>12 June</span>
-    <h1 class='text-3xl font-bold'>Good practices in React.js</h1>
-    <p class="text-gray-700 dark:text-gray-300">Quick five good practices you can apply to your React projects.</p>
-    <a
-      rel='noopener noreferrer'
-      href='#'
-      class='inline-flex items-center py-2 space-x-2 text-sm text-blue-600'
-    >
-      <span>Read more</span>
-      <ArrowNarrowRight />
-    </a>
-  </div>
-  <div class='pt-6 pb-4 space-y-2'>
-    <span>31 December</span>
-    <h1 class='text-3xl font-bold'>Machine Learning Introduction with Python</h1>
-    <p class="text-gray-700 dark:text-gray-300">Use scikit-learn library for your first Machine Learning algorithm.</p>
-    <a
-      rel='noopener noreferrer'
-      href='#'
-      class='inline-flex items-center py-2 space-x-2 text-sm text-blue-600'
-    >
-      <span>Read more</span>
-      <ArrowNarrowRight />
-    </a>
-  </div>
-
+<div class='pt-6 pb-4 space-y-2'>
+  <time datetime={pubDate}>{date}</time>
+  <h1 class='text-3xl font-bold'>{title}</h1>
+  <p class='text-gray-700 dark:text-gray-300'>
+    {description}
+  </p>
+  <a
+    rel='noopener noreferrer'
+    href={url}
+    class='inline-flex items-center py-2 space-x-2 text-sm text-blue-600'
+  >
+    <span>Read more</span>
+    <ArrowNarrowRight />
+  </a>
 </div>
