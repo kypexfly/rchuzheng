@@ -5,7 +5,7 @@ pubDate: 2023-01-10
 description: "Application to see news, manage and analyze cryptocurrencies."
 author: "Ricardo Chu"
 image:
-  url: "https://i.postimg.cc/zBPWgy0Y/cryptoview-cover.jpg"
+  url: "/assets/cover-cryptoview.jpg"
   alt: "CryptoView App"
 link:
   demo: https://astro-rcz.netlify.app/

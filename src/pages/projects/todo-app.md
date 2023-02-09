@@ -5,7 +5,7 @@ pubDate: 2022-12-01
 description: "A To-Do App with task completion, sort, and local storage."
 author: "Ricardo Chu"
 image:
-  url: "https://i.postimg.cc/GptM6V5b/todoapp-blog-cover.jpg"
+  url: "/assets/cover-todo-app.jpg"
   alt: "To-Do App"
 link:
   demo: https://react-todoapp-ts.netlify.app/

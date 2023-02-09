@@ -1,38 +1,38 @@
 ---
-import ThemeSwitcher from "./ThemeSwitcher";
-const pathname = new URL(Astro.request.url).pathname;
+import ThemeSwitcher from './ThemeSwitcher'
+const pathname = new URL(Astro.request.url).pathname
 const currentPath = pathname.split('/')[1]
 ---
 
-<header class="px-4 md:px-2 dark:text-gray-100">
-	<div class="max-w-screen-lg flex justify-between h-16 mx-auto">
-		<a rel="noopener noreferrer" href="/" aria-label="Back to homepage" class="hidden lg:flex items-center font-bold">
-			💻 Ricardo Chu
-		</a>
-		<ul id="navbar-nav" class="items-stretch flex space-x-3">
-			<li class="flex">
-				<a rel="noopener noreferrer" href="/" class={`${currentPath === "" ? "active" : " "} flex items-center px-2 font-semibold`}>Home</a>
-			</li>
-			<li class="flex">
-				<a rel="noopener noreferrer" href="/projects" class={`${currentPath === "projects" ? "active" : " "} flex items-center px-2 font-semibold`}>Projects</a>
-			</li>
-			<li class="flex">
-				<a rel="noopener noreferrer" href="/blog" class={`${currentPath === "blog" ? "active" : " "} flex items-center px-2 font-semibold`}>Blog</a>
-			</li>
-			<li class="flex">
-				<a rel="noopener noreferrer" href="/about" class={`${currentPath === "about" ? "active" : " "} flex items-center px-2 font-semibold`}>About</a>
-			</li>
-		</ul>
-		
-		<div class="items-center flex-shrink-0 flex">
-			<ThemeSwitcher client:load />
-		</div>
-	</div>
+<header class='px-4 md:px-2 dark:text-gray-100'>
+  <div class='max-w-screen-lg flex justify-between h-16 mx-auto'>
+    <a rel='noopener noreferrer' href='/' aria-label='Back to homepage' class='hidden lg:flex items-center font-bold'> 💻 Ricardo Chu</a>
+    <ul id='navbar-nav' class='items-stretch flex space-x-3'>
+      <li class='flex'>
+        <a rel='noopener noreferrer' href='/' class:list={['flex items-center px-2 font-semibold', { active: currentPath === '' }]}>Home</a>
+      </li>
+      <li class='flex'>
+        <a rel='noopener noreferrer' href='/projects' class:list={['flex items-center px-2 font-semibold', { active: currentPath === 'projects' }]}
+          >Projects</a
+        >
+      </li>
+      <li class='flex'>
+        <a rel='noopener noreferrer' href='/blog' class:list={['flex items-center px-2 font-semibold', { active: currentPath === 'blog' }]}>Blog</a>
+      </li>
+      <li class='flex'>
+        <a rel='noopener noreferrer' href='/about' class:list={['flex items-center px-2 font-semibold', { active: currentPath === 'about' }]}>About</a
+        >
+      </li>
+    </ul>
+
+    <div class='items-center flex-shrink-0 flex'>
+      <ThemeSwitcher client:load />
+    </div>
+  </div>
 </header>
 
 <style>
-	.active, .dark .active {
-		border-color: #0d6efd;
-		color: #0d6efd;
-	}
+  .active {
+    @apply text-blue-600;
+  }
 </style>

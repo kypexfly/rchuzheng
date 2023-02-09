@@ -5,7 +5,7 @@ pubDate: 2022-07-01
 description: "Tools for Epic Seven mobile game. Search and filter of heroes or artifacts."
 author: "Ricardo Chu"
 image:
-  url: "https://i.postimg.cc/XJPmyCLd/epicsevenindex-blog-cover.jpg"
+  url: "/assets/cover-epic7index.jpg"
   alt: "EpicSeven Index"
 link:
   demo: https://epic7index.netlify.app/

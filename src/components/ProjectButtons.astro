@@ -2,13 +2,14 @@
 import { ArrowNarrowRight, BrandGithub } from 'tabler-icons-react'
 const { link } = Astro.props
 ---
+
 <div class='flex items-center gap-3 justify-center'>
   {
     link.source && (
       <a
         class='group relative inline-flex items-center overflow-hidden rounded bg-gray-600 px-8 py-3 text-white focus:outline-none active:bg-gray-500'
-        target="_blank" 
-        rel="noopener noreferrer"
+        target='_blank'
+        rel='noopener noreferrer'
         href={link.source}
       >
         <span class='absolute right-0 translate-x-full transition-transform group-hover:-translate-x-4'>
@@ -25,8 +26,8 @@ const { link } = Astro.props
     link.demo && (
       <a
         class='group relative inline-flex items-center overflow-hidden rounded bg-blue-600 px-8 py-3 text-white focus:outline-none active:bg-blue-500'
-        target="_blank" 
-        rel="noopener noreferrer"
+        target='_blank'
+        rel='noopener noreferrer'
         href={link.demo}
       >
         <span class='absolute right-0 translate-x-full transition-transform group-hover:-translate-x-4'>

@@ -5,7 +5,7 @@ pubDate: 2023-01-20
 description: "Fullstack ecommerce app with React, Strapi and PostgreSQL."
 author: "Ricardo Chu"
 image:
-  url: "https://i.postimg.cc/wjnkSmg4/vstore-cover.jpg"
+  url: "/assets/cover-ecommerce.jpg"
   alt: "Virtual Store Ecommerce"
 link:
   demo: https://vstore-rcz.netlify.app/

@@ -5,7 +5,7 @@ pubDate: 2023-01-10
 description: "Fullstack ecommerce app with React, Strapi and PostgreSQL."
 author: "Ricardo Chu"
 image:
-  url: "https://i.postimg.cc/MKXw5v5r/myportfolio-cover.jpg"
+  url: "/assets/cover-astro-portfolio.jpg"
   alt: "My Portfolio with Astro"
 link:
   demo: https://astro-rcz.netlify.app/

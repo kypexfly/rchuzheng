@@ -1,28 +1,23 @@
 ---
-import BlogCard from '../components/BlogCard.astro';
+import BlogCard from '../components/BlogCard.astro'
 import Layout from '../layouts/BaseLayout.astro'
-import type { Frontmatter } from '../types';
+import type { Frontmatter } from '../types'
 const allPost = await Astro.glob<Frontmatter>('./blog/*.md')
 ---
 
 <Layout title='Blog | Ricardo Chu'>
-  <header class="text-center sm:text-left">
-    <h3 class="mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl">Blog</h3>
-    <p class="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">Personal articles of things I've learned or I want to share.</p>
+  <header class='text-center sm:text-left'>
+    <h3 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Blog</h3>
+    <p class='max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
+      Personal articles of things I've learned or I want to share.
+    </p>
   </header>
 
   <div class='flex flex-col col-span-12 divide-y lg:col-span-6 divide-gray-200 dark:divide-gray-800'>
     {
       allPost.map((post) => {
         const { title, description, pubDate } = post.frontmatter
-        return (
-          <BlogCard
-            title={title}
-            description={description}
-            pubDate={pubDate}
-            url={post.url}
-          />
-        )
+        return <BlogCard title={title} description={description} pubDate={pubDate} url={post.url} />
       })
     }
   </div>
