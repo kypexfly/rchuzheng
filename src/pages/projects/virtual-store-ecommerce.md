@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
 title: 'Virtual Store Ecommerce'
-pubDate: 2023-01-10
+pubDate: 2023-01-20
 description: "Fullstack ecommerce app with React, Strapi and PostgreSQL."
 author: "Ricardo Chu"
 image:

@@ -1,16 +1,16 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: 'My Portfolio with Astro'
+title: 'CryptoView App'
 pubDate: 2023-01-10
-description: "Fullstack ecommerce app with React, Strapi and PostgreSQL."
+description: "Application to see news, manage and analyze cryptocurrencies."
 author: "Ricardo Chu"
 image:
-  url: "https://i.postimg.cc/MKXw5v5r/myportfolio-cover.jpg"
-  alt: "My Portfolio with Astro"
+  url: "https://i.postimg.cc/zBPWgy0Y/cryptoview-cover.jpg"
+  alt: "CryptoView App"
 link:
   demo: https://astro-rcz.netlify.app/
   source: https://github.com/kypexfly/astro-portfolio
-tags: ["astro", "typescript", "tailwindcss"]
+tags: ["react", "express", "plotly", "mongodb"]
 ---
 
 ## About epic7index
