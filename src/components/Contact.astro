@@ -1,36 +1,39 @@
 ---
-import { BrandGithub, Mail, BrandLinkedin, BrandTelegram } from 'tabler-icons-react'
+import { BrandGithub, BrandLinkedin, BrandTelegram } from 'tabler-icons-react'
+const { showText = true } = Astro.props
+
+const contactMedia = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/kypexfly',
+    icon: BrandGithub,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/ricardo-chu-zheng',
+    icon: BrandLinkedin,
+  },
+  {
+    name: 'Telegram',
+    url: 'https://telegram.me/ricardo_chu',
+    icon: BrandTelegram,
+  },
+]
 ---
 
 <div
   class='inline-flex flex-wrap -space-x-px overflow-hidden rounded-md border shadow-sm dark:border-gray-800 dark:bg-gray-900'
 >
-
-  <a
-    href='https://github.com/kypexfly'
-    target='_blank'
-    rel='noopener noreferrer'
-    class='flex gap-3 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative dark:text-gray-200 dark:hover:bg-gray-800'
-  >
-    <BrandGithub /> GitHub
-  </a>
-
-  <a
-    href='https://www.linkedin.com/in/ricardo-chu-zheng/'
-    target='_blank'
-    rel='noopener noreferrer'
-    class='flex gap-3 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative dark:text-gray-200 dark:hover:bg-gray-800'
-    >
-    <BrandLinkedin /> LinkedIn
-  </a>
-
-  <a
-    href='https://telegram.me/ricardo_chu'
-    target='_blank'
-    rel='noopener noreferrer'
-    class='flex gap-3 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative dark:text-gray-200 dark:hover:bg-gray-800'
-  >
-    <BrandTelegram /> Telegram
-  </a>
-
+  {
+    contactMedia.map((media) => (
+      <a
+        href={media.url}
+        target='_blank'
+        rel='noopener noreferrer'
+        class='flex gap-3 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:relative dark:text-gray-200 dark:hover:bg-gray-800'
+      >
+        <media.icon /> {showText && media.name}
+      </a>
+    ))
+  }
 </div>

@@ -2,40 +2,98 @@
 import Contact from '../components/Contact.astro'
 import Timeline from '../components/Timeline.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { calculateAge } from '../utils/calculateAge'
 ---
 
 <BaseLayout title='About | Ricardo CHu'>
   <section>
-    <div class="text-center sm:text-left">
-      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>
-    About me
-  </h1>
-  </div>
+    <div class='text-center sm:text-left'>
+      <h1
+        class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'
+      >
+        About me
+      </h1>
+    </div>
 
-  <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
-    Graduate student in Electrical Engineering. Lorem ipsum dolor sit amet consectetur adipisicing
-    elit. Itaque molestiae hic rerum voluptate fugiat suscipit autem sed praesentium, est eius
-    laudantium voluptas cupiditate dolores at. Nihil, assumenda? Culpa, reiciendis minus? Odio
-    eveniet repellendus, dicta exercitationem nihil alias omnis at libero perspiciatis a in deserunt
-    fugit quidem ullam beatae dolore est. Blanditiis temporibus soluta, dolorum possimus quas
-    mollitia magnam deserunt molestias.
-  </p>
+    <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
+      I am a {calculateAge('1999-09-19')} year old electrical engineering graduate student. Since I was
+      a child I have been interested in how web pages are made, being introduced to the world of programming
+      with Javascript, going through Python as one of my favorite languages and using MATLAB/R for applications
+      in science or engineering.
+    </p>
+    <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
+      I have managed graphic design communities and actively participating for more than 5 years. I
+      graduated as an electrical engineer from Universidad Estatal de Quevedo in 2023. I have
+      conducted several research projects during my university career, including the sizing of a
+      residential photovoltaic system and the analysis of harmonics of electric vehicles in
+      distribution networks. I have an intellectual curiosity so I always try learning new things.
+    </p>
   </section>
 
-  <hr class="my-10 dark:border-gray-800" />
+  <hr class='my-10 dark:border-gray-800' />
 
   <Timeline />
 
-  <hr class="my-10 dark:border-gray-800" />
-  
+  <hr class='my-10 dark:border-gray-800' />
+
   <section>
-    <Contact/>
-
-
-    <div class="p-3">
-      <a class="text-gray-700 dark:text-gray-300 underline" href="mailto:rczgraphics@live.com">rczgraphics@live.com</a>
+    <div class='text-center sm:text-left'>
+      <h1
+        class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'
+      >
+        Interests & Hobbies
+      </h1>
     </div>
 
+    <ul
+      class='my-3 flex flex-col flex-wrap h-40 text-center sm:text-left text-gray-700 dark:text-gray-300'
+    >
+      <li class='p-2'>Machine Learning</li>
+      <li class='p-2'>Web Development</li>
+      <li class='p-2'>Power Electronics</li>
+      <li class='p-2'>Graphic Design</li>
+      <li class='p-2'>Play videogames</li>
+      <li class='p-2'>Computers</li>
+      <li class='p-2'>Read books</li>
+      <li class='p-2'>Listen to music</li>
+    </ul>
   </section>
 
+  <hr class='my-10 dark:border-gray-800' />
+
+  <section>
+    <div class='text-center sm:text-left'>
+      <h1
+        class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'
+      >
+        Skills
+      </h1>
+    </div>
+    <ul class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
+      <li><strong>Electrical simulations:</strong> MATLAB, Simulink, DIgSILENT PowerFactory, CYME, CADe Simu, DIALux</li>
+      <li><strong>Design & multimedia:</strong> Adobe Photoshop, Premiere Pro, Affinity Designer</li>
+      <li><strong>Electronics:</strong> Arduino, LTSpice, Proteus, NI Multisim</li>
+      <li><strong>Languages:</strong> Native Spanish, English B2</li>
+    </ul>
+  </section>
+
+  <hr class='my-10 dark:border-gray-800' />
+
+  <section>
+    <div class='text-center sm:text-left'>
+      <h1
+        class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'
+      >
+        Contact
+      </h1>
+    </div>
+
+    <Contact />
+
+    <div class='p-3'>
+      <a class='text-gray-700 dark:text-gray-300 underline' href='mailto:rczgraphics@live.com'
+        >rczgraphics@live.com</a
+      >
+    </div>
+  </section>
 </BaseLayout>

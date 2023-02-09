@@ -6,7 +6,7 @@ description: "Quick five good practices you can apply to your React projects."
 author: "Ricardo Chu"
 image:
   url: "/assets/banner-cloud.jpg"
-  alt: "The Astro logo with the word One."
+  alt: ""
 tags: ["javascript", "react"]
 ---
 
