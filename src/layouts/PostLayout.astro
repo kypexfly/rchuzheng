@@ -43,37 +43,37 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
 </BaseLayout>
 
 <style is:inline>
-  article {
+  .markdown {
     line-height: 1.5;
     font-size: 17px;
     color: rgb(55, 65, 81);
   }
-  .dark article {
+  .dark .markdown {
     color: rgb(209, 213, 219);
   }
-  p {
+  .markdown p {
     margin: 1.5rem 0;
   }
-  h2 {
+  .markdown h2 {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 600;
     margin: 1.5rem 0;
   }
-  h3,
-  h4,
-  h5,
-  h6 {
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
     font-size: 1.25rem;
     line-height: 2.5rem;
     font-weight: 600;
     margin: 1.5rem 0;
   }
-  ul {
+  .markdown ul {
     padding-left: 2em;
     list-style-type: disc;
   }
-  article :not(pre) code {
+  .markdown :not(pre) code {
     padding: 0.2em 0.4em;
     margin: 0;
     font-size: 85%;
@@ -81,16 +81,16 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
     background-color: rgb(209, 213, 219);
     border-radius: 6px;
   }
-  .dark article :not(pre) code {
+  .dark .markdown :not(pre) code {
     background-color: rgb(55, 65, 81);
     color: rgb(209, 213, 219);
   }
-  pre {
+  .markdown pre {
     padding: 1.5em;
     border-radius: 0.475rem;
     font-size: 14px;
   }
-  article a {
+  .markdown a {
     color: rgb(37, 99, 235);
     text-decoration: underline;
   }
