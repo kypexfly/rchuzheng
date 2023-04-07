@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+}
+
+body {
+    /* background-color: #0e0f3b; */
+    /* color: rgb(231, 231, 231); */
+    font-family: Poppins, "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 80px;
+    float: left;
+    margin-right: 1em;
+}
+
+/* NAVBAR */
+
+#logo {
+    float: left;
+}
+
+#intro .content {
+    font-size: 200%;
+}
+
+.container {
+    max-width: 1550px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    height: inherit
+}
+
+#intro .container, #skills .container {
+    display: table;
+    border-bottom: 1px solid #e4e6ef;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e4e6ef;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+}
+
+nav .right {
+    margin: auto 0 auto auto;
+    margin: auto;
+    float: right;
+}
+
+nav li {
+    text-decoration: none;
+    display: inline-block;
+    clear: both;
+    list-style: none;
+    vertical-align: middle;
+}
+
+nav li a {
+    font-weight: bold;
+    padding: 0.5em 1.25em;
+    border-radius: .475rem;
+    color: #3f4254;
+    font-weight: 500;
+    /* font-size: 14px; */
+}
+
+.onpage, nav li a:hover {
+    transition: color .2s ease, background-color .2s ease;
+    background-color: rgba(239, 242, 245, .4);
+    color: var(--first-color) !important;
+}
+
+a {
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+:root {
+    --first-color: #009ef7;
+}
+
+#idbox {
+    background-color: rgba(245, 248, 250, 0.7);
+    display: inline-block;
+    border-radius: 0.475rem;
+    padding: 1em;
+    width: 25em;
+    font-size: initial;
+}
+
+/* https://codepen.io/ckor/pen/lBnxh  */
+
+/* section {
+    width: 100%;
+    padding: 0 7%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    background-color: #373B44;
+    height: 100vh;
+    
+    &:nth-of-type(2n) {
+      background-color: #FE4B74;
+    }
+  } */
+
+section {
+    display: table;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 0 7%;
+    scroll-margin-top: 60px;
+}
+
+
+
+#intro {
+    height: 60vh;
+    background-image: url("images/gynecology-checkup-pregnancy-and-prenatal-healthcare-concept-vector-vector-id1326130264.jpg");
+    background-repeat: no-repeat;
+    background-position: 75%;
+}
+
+#skills {
+    background-color: #F5F8FA;
+    height: 80vh;
+}
+
+/* 
+#skills{
+        background-image: url("images/intro.jpg");
+        background-attachment: fixed;
+} */
+
+.content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+footer {
+    border-top: 1px solid #e4e6ef;
+    padding: 1em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3em;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: white;
+    border-radius: 0.475rem;
+    padding: 5em 10em;
+}
+
+.wrapper .wrbox {
+    background-color: rgb(245, 248, 250);
+    border-radius: 0.475rem;
+    overflow: hidden;
+    /* width: 300px; */
+    /* height: 180px; */
+    box-shadow: 0 5px 10px 7px rgba(0, 0, 0, .05);
+}
+
+.wrbox li {
+    list-style: none;
+}
+
+.wrapper .wrbox ul {
+    padding: 0 1em 0 auto;
+    margin: 1em;
+}
+
+.wrapper h2 {
+    background-color: var(--first-color);
+    color: white;
+    font-weight: 500;
+    padding: .5em 1em;
+    font-size: 1em;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* FLEXBOX https://css-tricks.com/adaptive-photo-layout-with-flexbox/ */
+
+ul#flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 2vmin; */
+    padding: 0;
+    list-style: none;
+}
+
+#flexbox li {
+    height: 25vh;
+    flex-grow: 1;
+    margin: 1vmin;
+}
+
+#flexbox li:last-child {
+    /* There's no science in using "10" here. In all my testing, this delivered the best results. */
+    flex-grow: 10;
+}
+
+#flexbox img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    /* border-radius: 1vmin; */
+}
+
+/* ADVANCED */
+
+/* Portrait */
+
+@media (max-aspect-ratio: 1/1) {
+    #flexbox li {
+        height: 30vh;
+    }
+}
+
+/* Short screens */
+
+@media (max-height: 480px) {
+    #flexbox li {
+        height: 80vh;
+    }
+}
+
+/* Smaller screens in portrait */
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    ul#flexbox {
+        flex-direction: row;
+    }
+
+    #flexbox li {
+        height: auto;
+        width: 100%;
+    }
+
+    #flexbox img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
+
+
+.fancybox-bg {
+    background: #000 !important;
+}
