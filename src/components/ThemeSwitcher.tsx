@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { BrightnessUp } from 'tabler-icons-react'
 
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light')
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'dark')
 
   const handleClick = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')

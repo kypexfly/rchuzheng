@@ -8,18 +8,10 @@ image:
   url: "/assets/cover-epic7index.jpg"
   alt: "EpicSeven Index"
 link:
-  demo: https://epic7index.netlify.app/
-  source: https://github.com/kypexfly/e7c-ts-react
+  demo: https://epic7index.netlify.app
+  source: https://github.com/kypexfly/epic7index
 tags: ["react", "typescript", "tailwindcss"]
 ---
 
-## About epic7index
-
 This is an Epic Seven fan made webside using [EpicSevenDB](https://api.epicsevendb.com/) API as source of information and inspired on [epic7x](https://epic7x.com/), [epicsevendb](https://epicsevendb.com/) and [epic7stats](https://www.epic7stats.com/).
 Implemented with React.js library.
-
-## Know issues
-
-* Public filter in Artifacts is not working.
-* API is giving different element/class/sign names, ie. manauser = soul weaver, twin = gemini, etc.
-* Filtering heroes and artifacts feels slow. Needs optimization.

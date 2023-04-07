@@ -8,8 +8,8 @@ image:
   url: "/assets/cover-astro-portfolio.jpg"
   alt: "My Portfolio with Astro"
 link:
-  demo: https://astro-rcz.netlify.app/
-  source: https://github.com/kypexfly/astro-portfolio
+  demo: https://rchuzheng.netlify.app
+  source: https://github.com/kypexfly/rchuzheng
 tags: ["astro", "typescript", "tailwindcss"]
 ---
 

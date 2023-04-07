@@ -5,7 +5,7 @@ import Layout from '../layouts/BaseLayout.astro'
 
 <Layout title='Ricardo Chu'>
   <header class='flex flex-col sm:flex-row items-center gap-6 mb-6 justify-center sm:justify-start'>
-    <img src='/assets/ricardo-chu.png' height={100} width={100} class='rounded-full' />
+    <img src='/assets/ricardo-chu.png' height={115} width={115} class='rounded-full' />
     <div class='text-center sm:text-left'>
       <h1 class='text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>
         Hi, I'm <span class='text-gradient'>Ricardo!</span>
@@ -21,10 +21,7 @@ import Layout from '../layouts/BaseLayout.astro'
 
   <!-- Favorite Techologies -->
   <section>
-    <h3 class='my-3 font-semibold text-3xl text-center sm:text-left'>Favorite Technologies</h3>
-    <p class='my-3 leading-relaxed text-gray-700 dark:text-gray-300 text-center sm:text-left'>
-      Technologies I feel comfortable and happy to work with.
-    </p>
+    <h3 class='my-3 font-semibold text-3xl text-center sm:text-left'>Technologies</h3>
     <ul class='flex flex-wrap gap-3 my-6 justify-center'>
       <li class='flex flex-col items-center px-6 py-3 rounded border dark:border-gray-800'>
         <img width={40} height={40} src='https://skillicons.dev/icons?i=react' alt='React' /> React
@@ -45,26 +42,25 @@ import Layout from '../layouts/BaseLayout.astro'
         <img width={40} height={40} src='https://skillicons.dev/icons?i=python' alt='Python' /> Python
       </li>
     </ul>
-  </section>
 
-  <hr class='my-10 dark:border-gray-800' />
-
-  <!-- Other Technologies -->
-  <section>
-    <h3 class='my-3 font-semibold text-3xl text-center sm:text-left'>Other Technologies</h3>
-    <ul class='my-3 flex flex-col flex-wrap h-40 text-center sm:text-left text-gray-700 dark:text-gray-300'>
+    <p class='my-3 font-semibold text-xl text-center sm:text-left'>and also...</p>
+    <ul class='my-3 grid grid-cols-2 sm: sm:grid-cols-3 md:grid-cols-4 text-center sm:text-left text-gray-700 dark:text-gray-300'>
       <li class='p-2'>Next.js</li>
       <li class='p-2'>Node.js</li>
       <li class='p-2'>Strapi</li>
       <li class='p-2'>MongoDB</li>
       <li class='p-2'>Prisma</li>
       <li class='p-2'>Bootstrap</li>
+      <li class='p-2'>CSS Modules</li>
       <li class='p-2'>TailwindCSS</li>
-      <li class='p-2'>JSON Web Token (JWT)</li>
+      <li class='p-2'>JSON Web Token</li>
       <li class='p-2'>NPM</li>
       <li class='p-2'>Git</li>
       <li class='p-2'>GitHub</li>
       <li class='p-2'>Docker</li>
+      <li class='p-2'>Netlify Functions</li>
+      <li class='p-2'>React Query</li>
+      <li class='p-2'>Zustand</li>
     </ul>
   </section>
 </Layout>

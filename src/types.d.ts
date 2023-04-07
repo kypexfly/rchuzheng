@@ -13,4 +13,5 @@ export interface Frontmatter {
     source?: string,
     demo?: string
   }
+  draft?: boolean
 }

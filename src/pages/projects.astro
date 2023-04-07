@@ -2,7 +2,7 @@
 import ProjectCard from '../components/ProjectCard.astro'
 import Layout from '../layouts/BaseLayout.astro'
 import type { Frontmatter } from '../types'
-const allProjects = await Astro.glob<Frontmatter>('./projects/*.md')
+const allProjects = (await Astro.glob<Frontmatter>('./projects/*.md')).filter((post) => !post.frontmatter.draft)
 const sortedByDateProjects = allProjects.sort((a, b) => {
   if (a.frontmatter.pubDate > b.frontmatter.pubDate) return -1
   if (a.frontmatter.pubDate < b.frontmatter.pubDate) return 1
@@ -12,17 +12,18 @@ const sortedByDateProjects = allProjects.sort((a, b) => {
 
 <Layout title='Projects | Ricardo Chu'>
   <header class='text-center sm:text-left'>
-    <h3 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Projects</h3>
+    <h3 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>🚀 Projects</h3>
     <p class='max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
-      Some projects I've worked using top frameworks and good practices.
+      Projects that showcase my expertise in frontend web development, utilizing frameworks and best practices to deliver
+      scalable and responsive solutions that meet client needs.
     </p>
   </header>
 
   <ul class='grid grid-cols-1 gap-5 md:grid-cols-2 sm:gap-8'>
     {
       sortedByDateProjects.map((project) => {
-        const { title, description, image, pubDate, tags } = project.frontmatter
-        return <ProjectCard title={title} description={description} image={image} pubDate={pubDate} url={project.url} tags={tags} />
+        const { title, description, image, pubDate, tags, link } = project.frontmatter
+        return <ProjectCard title={title} description={description} image={image} pubDate={pubDate} link={link} tags={tags} />
       })
     }
   </ul>

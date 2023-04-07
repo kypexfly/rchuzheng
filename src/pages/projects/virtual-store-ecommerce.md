@@ -11,6 +11,7 @@ link:
   demo: https://vstore-rcz.netlify.app/
   source: https://github.com/kypexfly/tvhub-react
 tags: ["react", "typescript", "strapi", "tailwindcss", "docker"]
+draft: true
 ---
 
 ## About epic7index

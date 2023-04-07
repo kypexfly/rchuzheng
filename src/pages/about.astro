@@ -8,23 +8,20 @@ import { calculateAge } from '../utils/calculateAge'
 <BaseLayout title='About | Ricardo Chu'>
   <section>
     <div class='text-center sm:text-left'>
-      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>About me</h1>
+      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>🫡 About me</h1>
     </div>
 
     <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
-      I am a {calculateAge('1999-09-19')} year old electrical engineering graduate student. Since I was a child I have been interested in how web pages
-      are made, being introduced to the world of programming with Javascript, going through Python as one of my favorite languages and using MATLAB/R for
-      applications in science or engineering.
+      I am a {calculateAge('1999-09-19')}-year-old graduate student in Electrical Engineering. From a young age, I have been fascinated by the
+      intricacies of web development, exploring programming languages such as Javascript, Python, and utilizing tools like MATLAB/R for scientific and
+      engineering applications.
     </p>
-    <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
-      I have managed graphic design communities and actively participating for more than 5 years. I graduated as an electrical engineer from
-      Universidad Estatal de Quevedo in 2023. I have conducted several research projects during my university career, including the sizing of a
-      residential photovoltaic system and the analysis of harmonics of electric vehicles in distribution networks. I have an intellectual curiosity so
-      I always try learning new things.
+    <p class='mt-6 mb-12 leading-relaxed text-gray-700 dark:text-gray-300'>
+      I have managed graphic design communities for over 5 years. Throughout my career, conducted research projects on topics such as the sizing of
+      residential photovoltaic systems and analyzing the harmonics of electric vehicles in distribution networks. I have a strong passion for learning
+      and am always seeking new knowledge and experiences.
     </p>
   </section>
-
-  <hr class='my-10 dark:border-gray-800' />
 
   <Timeline />
 
@@ -32,7 +29,21 @@ import { calculateAge } from '../utils/calculateAge'
 
   <section>
     <div class='text-center sm:text-left'>
-      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Interests & Hobbies</h1>
+      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Contact Information</h1>
+    </div>
+
+    <Contact />
+
+    <div class='p-3'>
+      <a class='text-gray-700 dark:text-gray-300 underline' href='mailto:rczgraphics@live.com'>rczgraphics@live.com</a>
+    </div>
+  </section>
+
+  <hr class='my-10 dark:border-gray-800' />
+
+  <section>
+    <div class='text-center sm:text-left'>
+      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Interests and Hobbies</h1>
     </div>
 
     <ul class='my-3 flex flex-col flex-wrap h-40 text-center sm:text-left text-gray-700 dark:text-gray-300'>
@@ -51,12 +62,20 @@ import { calculateAge } from '../utils/calculateAge'
 
   <section>
     <div class='text-center sm:text-left'>
-      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Skills</h1>
+      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Skills and Expertise</h1>
     </div>
-    <ul class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
+    <ul class='my-6 leading-relaxed text-gray-700 dark:text-gray-300 space-y-3'>
+      <li>
+        <strong>Languages:</strong>
+        Native Spanish, English B2
+      </li>
       <li>
         <strong>Electrical simulations:</strong>
         MATLAB, Simulink, DIgSILENT PowerFactory, CYME, CADe Simu, DIALux
+      </li>
+      <li>
+        <strong>Office Suite:</strong>
+        Microsfot Word, Excel, Powerpoint
       </li>
       <li>
         <strong>Design & multimedia:</strong>
@@ -70,24 +89,6 @@ import { calculateAge } from '../utils/calculateAge'
         <strong>Electronics:</strong>
         Arduino, LTSpice, Proteus, NI Multisim
       </li>
-      <li>
-        <strong>Languages:</strong>
-        Native Spanish, English B2
-      </li>
     </ul>
-  </section>
-
-  <hr class='my-10 dark:border-gray-800' />
-
-  <section>
-    <div class='text-center sm:text-left'>
-      <h1 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>Contact</h1>
-    </div>
-
-    <Contact />
-
-    <div class='p-3'>
-      <a class='text-gray-700 dark:text-gray-300 underline' href='mailto:rczgraphics@live.com'>rczgraphics@live.com</a>
-    </div>
   </section>
 </BaseLayout>
