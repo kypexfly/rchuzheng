@@ -1,0 +1,22 @@
+export const galleryData = [
+  '/assets/design(1).png',
+  '/assets/design(2).png',
+  '/assets/design(3).png',
+  '/assets/design(5).png',
+  '/assets/design(6).png',
+  // "/assets/design(7).png",
+  '/assets/design(8).png',
+  // "/assets/design(9).png",
+  '/assets/design(10).png',
+  '/assets/design(11).png',
+  '/assets/design(12).png',
+  '/assets/design(13).png',
+  '/assets/design(14).png',
+  // "/assets/design(15).png",
+  '/assets/design(16).png',
+  '/assets/design(17).png',
+  // "/assets/design(18).png",
+  '/assets/design(19).png',
+  // "/assets/design(20).png",
+  '/assets/design(21).png'
+]

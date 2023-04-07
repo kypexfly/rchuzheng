@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Recursos para aprender React",
+    "date": "2023-01-05",
+    "description": "Recursos para aprender React",
+    "tags": [
+      "javascript",
+      "react"
+    ],
+    "image": "/assets/banner-reactlogo.jpg",
+    "slug": "recursos-para-aprender-react"
+  },
+  {
+    "title": "Buenas prácticas en ReactJS",
+    "date": "2022-12-12",
+    "description": "Ejemplo de buenas prácticas en React",
+    "tags": [
+      "javascript",
+      "react"
+    ],
+    "image": "/assets/banner-cloud.jpg",
+    "slug": "buenas-practicas-en-reactjs"
+  },
+  {
+    "title": "Búsqueda binaria en Javascript",
+    "date": "2022-12-05",
+    "description": "Entiende el algoritmo de de búsqueda binaria y aplícalo en Javascript",
+    "tags": [
+      "python",
+      "tutorial"
+    ],
+    "image": "/assets/banner-bsalg.jpg",
+    "slug": "busqueda-binaria-javascript"
+  },
+  {
+    "title": "Introducción al Machine Learning con scikit-learn en Python",
+    "date": "2022-09-25",
+    "description": null,
+    "tags": [
+      "python",
+      "tutorial",
+      "machine learning"
+    ],
+    "image": "/assets/banner-ainn.jpg",
+    "slug": "intro-machine-learning-sklearn"
+  },
+  {
+    "title": "Problemas de despacho económico con Python",
+    "date": "2022-09-20",
+    "description": "Resolución de algunos problemas de despacho económico",
+    "tags": [
+      "ingeniería",
+      "electricidad",
+      "python"
+    ],
+    "image": "/assets/banner-eldproblem.jpg",
+    "slug": "problemas-de-despacho-economico"
+  }
+]
