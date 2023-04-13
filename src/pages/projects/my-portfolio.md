@@ -11,6 +11,7 @@ link:
   demo: https://rchuzheng.netlify.app
   source: https://github.com/kypexfly/rchuzheng
 tags: ["astro", "typescript", "tailwindcss"]
+draft: true
 ---
 
 ## About epic7index
