@@ -8,7 +8,7 @@ image:
   url: "/assets/cover-cybertech.jpg"
   alt: "CyberTech preview"
 link:
-  demo: https://cybertech-blond.vercel.app
-  source: https://github.com/kypexfly/cybertech
+  demo: https://cybertech-ecommerce.vercel.app
+  source: https://github.com/kypexfly/cybertech-ecommerce
 tags: ["react", "next", "stripe", "zustand", "ssr"]
 ---
