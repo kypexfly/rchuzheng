@@ -1,5 +1,5 @@
 ---
-import { BrandGithub, BrandLinkedin, BrandTelegram } from 'tabler-icons-react'
+import { BrandGithub, BrandLinkedin, BrandTelegram, Mail } from 'tabler-icons-react'
 const { showText = true } = Astro.props
 
 const contactMedia = [
@@ -18,17 +18,22 @@ const contactMedia = [
     url: 'https://telegram.me/ricardo_chu',
     icon: BrandTelegram,
   },
+  {
+    name: 'Email',
+    url: 'mailto:rczgraphics@live.com',
+    icon: Mail,
+  },
 ]
 ---
 
-<div class='inline-flex flex-wrap -space-x-px overflow-hidden rounded-md border shadow-sm dark:border-zinc-800 dark:bg-zinc-900'>
+<div class='inline-flex -space-x-px overflow-hidden rounded-md border shadow-sm dark:border-zinc-800 dark:bg-zinc-900'>
   {
     contactMedia.map((media) => (
       <a
         href={media.url}
         target='_blank'
         rel='noopener noreferrer'
-        class='flex gap-3 px-6 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 focus:relative dark:text-zinc-200 dark:hover:bg-zinc-800'
+        class='flex gap-3 px-5 py-3 text-sm font-medium text-zinc-700 hover:bg-zinc-50 focus:relative dark:text-zinc-200 dark:hover:bg-zinc-800'
       >
         <media.icon /> {showText && media.name}
       </a>

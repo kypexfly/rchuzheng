@@ -1,18 +1,62 @@
 ---
 import Contact from '../components/Contact.astro'
 import Layout from '../layouts/BaseLayout.astro'
+import { calculateAge } from '../utils/calculateAge'
+const skills = [
+  {
+    name: 'Javascript',
+    icon: 'javascript',
+  },
+  {
+    name: 'Typescript',
+    icon: 'typescript',
+  },
+  {
+    name: 'React',
+    icon: 'react',
+  },
+  {
+    name: 'Next',
+    icon: 'next',
+  },
+  {
+    name: 'PostgreSQL',
+    icon: 'postgresql',
+  },
+  {
+    name: 'MongoDB',
+    icon: 'mongodb',
+  },
+  {
+    name: 'Node.js',
+    icon: 'nodejs',
+  },
+  {
+    name: 'TailwindCSS',
+    icon: 'tailwindcss',
+  },
+]
 ---
 
 <Layout title='Ricardo Chu'>
-  <header class='flex flex-col sm:flex-row items-center gap-6 mb-6 justify-center sm:justify-start'>
+  <header class='mb-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 justify-center sm:justify-start px-6 rounded-lg'>
     <img src='/assets/me.png' height={140} width={140} class='rounded-full' />
     <div class='text-center sm:text-left'>
-      <h1 class='text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>
-        Hi, I'm <span class='text-gradient'>Ricardo!</span>
+      <h1 class='text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-5xl'>
+        <span class=''>Ricardo</span> Chu Zheng
       </h1>
-      <p class='my-3 leading-relaxed text-gray-700 dark:text-gray-300'>Fullstack Web Developer. 💖 React and it's ecosystem!</p>
-      <p>
-        <Contact showText={false} />
+      <p class='mb-3 leading-relaxed text-gray-700 dark:text-white text-2xl text-gradient font-bold'>Frontend Web Developer</p>
+
+      <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
+        A {calculateAge('1999-09-19')}-year-old frontend web developer with expertise in TypeScript and React. <br />
+        <em class="text-sm">Context, ES6+, Zustand, Next.js, TailwindCSS and more.</em>
+      </p>
+      <Contact showText={false} />
+
+      <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
+        My passion for web development began when I was adolescence, experimenting with HTML and CSS in my spare time. Since then, I have honed my
+        skills in JavaScript and its frameworks. I thrive on solving complex problems and creating visually appealing user interfaces. I believe in
+        the power of technology to make a positive impact on the world, and I'm excited to be part of this dynamic and ever-evolving industry.
       </p>
     </div>
   </header>
@@ -22,28 +66,14 @@ import Layout from '../layouts/BaseLayout.astro'
   <!-- Favorite Techologies -->
   <section>
     <h3 class='my-3 font-semibold text-3xl text-center sm:text-left'>Technologies</h3>
-    <ul class='flex flex-wrap gap-3 my-6 justify-center text-gray-700 dark:text-gray-300'>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=react' alt='React' /> React
-      </li>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=next' alt='Next' /> Next
-      </li>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=astro' alt='Astro' /> Astro
-      </li>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=postgresql' alt='PostgreSQL' /> PostgreSQL
-      </li>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=nodejs' alt='Node.js' /> Node.js
-      </li>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=typescript' alt='Typescript' /> Typescript
-      </li>
-      <li class='flex flex-col items-center px-6 py-3'>
-        <img width={40} height={40} src='https://skillicons.dev/icons?i=python' alt='Python' /> Python
-      </li>
+    <ul class='flex flex-wrap my-6 justify-center text-gray-700 dark:text-gray-300'>
+      {
+        skills.map((skill) => (
+          <li class='flex flex-col items-center px-6 py-3'>
+            <img width={30} height={30} src={`https://skillicons.dev/icons?i=${skill.icon}`} alt={skill.name} />
+          </li>
+        ))
+      }
     </ul>
 
     <ul class='my-3 grid grid-cols-2 sm: sm:grid-cols-3 md:grid-cols-4 text-center sm:text-left text-gray-700 dark:text-gray-300'>
@@ -60,7 +90,7 @@ import Layout from '../layouts/BaseLayout.astro'
       <li class='p-2'>Git</li>
       <li class='p-2'>GitHub</li>
       <li class='p-2'>Docker</li>
-      <li class='p-2'>Netlify Functions</li>
+      <li class='p-2'>Python</li>
       <li class='p-2'>React Query</li>
       <li class='p-2'>Zustand</li>
     </ul>
@@ -72,7 +102,7 @@ import Layout from '../layouts/BaseLayout.astro'
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 400%;
+    /* background-size: 400%; */
     background-position: 0%;
   }
 </style>

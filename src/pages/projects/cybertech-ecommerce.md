@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: 'CyberTech e-commerce'
+title: 'CyberTech Ecommerce'
 pubDate: 2023-04-13
 description: "Fullstack ecommerce app with React/Next and Stripe payment."
 author: "Ricardo Chu"

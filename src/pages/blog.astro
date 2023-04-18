@@ -1,9 +1,10 @@
 ---
+import { UserExclamation } from 'tabler-icons-react'
 import BlogCard from '../components/BlogCard.astro'
 import Layout from '../layouts/BaseLayout.astro'
 import type { Frontmatter } from '../types'
 const allPost = (await Astro.glob<Frontmatter>('./blog/*.md')).filter((post) => !post.frontmatter.draft)
-  const sortedByDateProjects = allPost.sort((a, b) => {
+const sortedByDateProjects = allPost.sort((a, b) => {
   if (a.frontmatter.pubDate > b.frontmatter.pubDate) return -1
   if (a.frontmatter.pubDate < b.frontmatter.pubDate) return 1
   return 0
@@ -12,17 +13,21 @@ const allPost = (await Astro.glob<Frontmatter>('./blog/*.md')).filter((post) => 
 
 <Layout title='Blog | Ricardo Chu'>
   <header class='text-center sm:text-left'>
-    <h3 class='mb-6 text-gray-800 dark:text-gray-200 text-3xl font-bold tracking-tight sm:text-5xl'>🖊️ Blog</h3>
+    <h3 class='mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-5xl'>🖊️ Blog</h3>
     <p class='max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
       Personal articles where I share my insights and experiences on various topics, including web development and other relevant subjects.
     </p>
   </header>
 
-  <div class='flex flex-col col-span-12 divide-y lg:col-span-6 divide-gray-200 dark:divide-gray-800'>
+  <div class='flex gap-2 items-center p-3 rounded bg-blue-300/40'>
+    <UserExclamation /> The articles are currently being translated or are not yet complete.
+  </div>
+
+  <div class='flex flex-col col-span-12 divide-y lg:col-span-6 divide-gray-200 dark:divide-zinc-800'>
     {
       sortedByDateProjects.map((post) => {
-        const { title, description, pubDate } = post.frontmatter
-        return <BlogCard title={title} description={description} pubDate={pubDate} url={post.url} />
+        const { title, description, pubDate, image } = post.frontmatter
+        return <BlogCard title={title} description={description} pubDate={pubDate} url={post.url} image={image} />
       })
     }
   </div>
