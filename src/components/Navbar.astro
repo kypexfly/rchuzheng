@@ -1,5 +1,6 @@
 ---
 import ThemeSwitcher from './ThemeSwitcher'
+import { Image } from '@astrojs/image/components'
 const pathname = new URL(Astro.request.url).pathname
 const currentPath = pathname.split('/')[1]
 ---
@@ -7,7 +8,7 @@ const currentPath = pathname.split('/')[1]
 <header class='px-4 md:px-2 dark:text-gray-100 border-b dark:border-zinc-800'>
   <div class='max-w-screen-lg flex justify-between h-16 mx-auto'>
     <a rel='noopener noreferrer' href='/' aria-label='Back to homepage' class='hidden sm:flex items-center gap-2 font-bold'>
-      <img src='/favicon.png' width={24} /></a
+      <Image src='/favicon.png' alt="Ricardo Chu's logo" width={24} height={24} /></a
     >
     <ul id='navbar-nav' class='items-stretch flex'>
       <li class='flex'>
@@ -29,6 +30,6 @@ const currentPath = pathname.split('/')[1]
 
 <style>
   .active {
-    @apply text-blue-500;
+    @apply text-blue-500 dark:text-blue-600;
   }
 </style>

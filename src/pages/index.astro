@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components'
 import Contact from '../components/Contact.astro'
 import Layout from '../layouts/BaseLayout.astro'
 import { calculateAge } from '../utils/calculateAge'
@@ -49,7 +50,7 @@ const skills = [
 
       <p class='my-6 leading-relaxed text-gray-700 dark:text-gray-300'>
         A {calculateAge('1999-09-19')}-year-old frontend web developer with expertise in TypeScript and React. <br />
-        <em class="text-sm">Context, ES6+, Zustand, Next.js, TailwindCSS and more.</em>
+        <em class='text-sm'>Context, ES6, Zustand, Next.js, TailwindCSS and more.</em>
       </p>
       <Contact showText={false} />
 
@@ -70,7 +71,7 @@ const skills = [
       {
         skills.map((skill) => (
           <li class='flex flex-col items-center px-6 py-3'>
-            <img width={30} height={30} src={`https://skillicons.dev/icons?i=${skill.icon}`} alt={skill.name} />
+            <Image width={30} height={30} format="svg" src={`https://skillicons.dev/icons?i=${skill.icon}`} alt={skill.name} />
           </li>
         ))
       }

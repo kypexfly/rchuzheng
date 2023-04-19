@@ -11,13 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.16.6",
     "@astrojs/react": "^2.0.2",
     "@astrojs/tailwind": "^3.0.1",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "astro": "^2.0.4",
+    "astro": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "sharp": "^0.32.0",
     "tabler-icons-react": "^1.56.0"
   },
   "devDependencies": {
