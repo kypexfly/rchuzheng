@@ -41,7 +41,7 @@ const skills = [
 
 <Layout title='Ricardo Chu'>
   <header class='mb-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 justify-center sm:justify-start px-6 rounded-lg'>
-    <img src='/assets/me.png' height={140} width={140} class='rounded-full' />
+    <Image src='/assets/me.png' height={140} width={140} alt="Ricardo Chu picture" class='rounded-full' />
     <div class='text-center sm:text-left'>
       <h1 class='text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-5xl'>
         <span class=''>Ricardo</span> Chu Zheng
@@ -71,7 +71,7 @@ const skills = [
       {
         skills.map((skill) => (
           <li class='flex flex-col items-center px-6 py-3'>
-            <Image width={30} height={30} format="svg" src={`https://skillicons.dev/icons?i=${skill.icon}`} alt={skill.name} />
+            <Image width={30} height={30} format='svg' src={`https://skillicons.dev/icons?i=${skill.icon}`} alt={skill.name} />
           </li>
         ))
       }
