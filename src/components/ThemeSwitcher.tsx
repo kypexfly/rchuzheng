@@ -18,7 +18,7 @@ export default function ThemeSwitcher() {
   }, [theme])
 
   return (
-    <button onClick={handleClick} className='flex flex-shrink-0 items-center px-4'>
+    <button onClick={handleClick} className='p-4'>
       <BrightnessUp />
     </button>
   )
