@@ -5,8 +5,8 @@ pubDate: 2022-12-31
 description: "Use scikit-learn library for your first Machine Learning algorithm."
 author: "Ricardo Chu"
 image:
-  url: "/assets/deepmind-0vw8EOgHsYY-unsplash.jpg"
-  alt: "The Astro logo with the word One."
+  url: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&q=85&fm=jpg"
+  alt: "Absctract image"
 tags: ["machine learning", "tutorial", "python", "scikit-learn"]
 ---
 
@@ -49,18 +49,3 @@ pip install -U scikit-learn
 ~~~
 
 Este comando instalará scikit-learn en tu sistema y te permitirá utilizarlo en tus proyectos de machine learning.
-
-## Ejemplo utilizando el Iris dataset
-
-El conjunto de datos Iris es un conjunto de datos de ejemplo comúnmente utilizado en el aprendizaje automático. Contiene medidas de tres especies diferentes de iris (setosa, virginica y versicolor) y se utiliza a menudo como un ejemplo para probar algoritmos de aprendizaje automático.
-
-Para comenzar a trabajar con el conjunto de datos Iris en scikit-learn, primero debemos importar la biblioteca y cargar los datos en nuestro programa. Podemos hacer esto con el siguiente código:
-
-~~~py
-from sklearn import datasets
-
-iris = datasets.load_iris()
-~~~
-
-Una vez que hayamos cargado el conjunto de datos, podemos acceder a las características (los datos) y las etiquetas (la clase a la que pertenece cada muestra) usando las siguientes propiedades:
-

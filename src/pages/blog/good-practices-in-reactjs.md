@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: 'Good practices in React.js'
+title: 'Good practices in React.js (outdated)'
 pubDate: 2022-07-01
-description: "Quick five good practices you can apply to your React projects."
+description: "- Outdated - some practices are not used anymore."
 author: "Ricardo Chu"
 image:
-  url: "/assets/banner-abs.jpg"
-  alt: ""
+  url: "https://images.unsplash.com/photo-1629948618343-0d33f97a3091?ixlib=rb-4.0.3&q=85&fm=jpg"
+  alt: "Abstract image"
 tags: ["javascript", "react"]
 ---
 
