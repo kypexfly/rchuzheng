@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components'
+import LatestPosts from '../components/LatestPosts.astro'
 import type { Frontmatter } from '../types'
 import BaseLayout from './BaseLayout.astro'
 
@@ -27,11 +29,23 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
     <p class='text-sm dark:text-gray-400'>
       <time datetime={pubDate}>{date}</time>
     </p>
+
+    {
+      image.url && (
+        <Image height={350} aspectRatio={2} class='h-[350px] w-full object-cover object-center rounded' src={image.url} alt={image.alt} />
+        // <div class=' mx-auto mb-16 overflow-hidden rounded-none lg:rounded-lg'>
+      )
+    }
   </header>
 
-  <article class='px-0 sm:px-12 my-12 markdown'>
+  <article class='my-12 markdown'>
     <slot />
   </article>
+
+  <footer>
+    <h3 class='my-6 font-bold text-xl leading-loose'>You might also like</h3>
+    <LatestPosts title={title} />
+  </footer>
 </BaseLayout>
 
 <style is:inline>
