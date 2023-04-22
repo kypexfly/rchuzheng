@@ -5,7 +5,7 @@ pubDate: 2022-12-31
 description: "Use scikit-learn library for your first Machine Learning algorithm."
 author: "Ricardo Chu"
 image:
-  url: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&q=85&fm=jpg"
+  url: "https://images.unsplash.com/photo-1561679660-d00ee1e0dc8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
   alt: "Absctract image"
 tags: ["machine learning", "tutorial", "python", "scikit-learn"]
 ---

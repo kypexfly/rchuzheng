@@ -5,7 +5,7 @@ pubDate: 2023-02-24
 description: "4 tips for improving your code."
 author: "Ricardo Chu"
 image:
-  url: "/assets/deepmind-0vw8EOgHsYY-unsplash.jpg"
+  url: "https://images.unsplash.com/photo-1655635131633-a36ecd7f5b33?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=deepmind-0vw8EOgHsYY-unsplash.jpg"
   alt: "Abstract image"
 tags: ["tips", "projects", "frontend"]
 ---
