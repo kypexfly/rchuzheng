@@ -5,7 +5,7 @@ const pathname = new URL(Astro.request.url).pathname
 const currentPath = pathname.split('/')[1]
 ---
 
-<header class='px-4 md:px-2 dark:text-gray-100 border-b dark:border-zinc-800'>
+<header class='px-4 md:px-2 dark:text-gray-100 border-b border-zinc-300/25 dark:border-zinc-700/25 sticky top-0 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md z-10'>
   <div class='max-w-screen-lg flex justify-between h-16 mx-auto items-center align-middle'>
     <a rel='noopener noreferrer' href='/' aria-label='Back to homepage' class='hidden sm:flex items-center gap-2 font-bold w-6 h-6'>
       <Image src='/favicon.png' alt="Ricardo Chu's logo" width={24} height={24} /></a

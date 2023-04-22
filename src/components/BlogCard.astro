@@ -10,7 +10,7 @@ const date = new Date(pubDate).toLocaleDateString('en-US', {
 
 <a rel='noopener noreferrer' href={url} class='pt-6 pb-4 space-y-2 flex flex-col sm:flex-row gap-4 items-stretch group'>
   <div class='w-full sm:basis-64'>
-    <Image width={600} aspectRatio={2} src={image.url} alt={image.alt} class='w-full h-56 sm:h-36 rounded object-cover object-center' />
+    <Image width={600} height={300} src={image.url} alt={image.alt} class='w-full h-56 sm:h-36 rounded object-cover object-center' />
   </div>
   <div class='flex-1 py-2'>
     <time datetime={pubDate}>{date}</time>
