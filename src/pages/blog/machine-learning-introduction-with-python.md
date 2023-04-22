@@ -5,7 +5,7 @@ pubDate: 2022-12-31
 description: "Use scikit-learn library for your first Machine Learning algorithm."
 author: "Ricardo Chu"
 image:
-  url: "/assets/banner-ainn.jpg"
+  url: "/assets/deepmind-0vw8EOgHsYY-unsplash.jpg"
   alt: "The Astro logo with the word One."
 tags: ["machine learning", "tutorial", "python", "scikit-learn"]
 ---
