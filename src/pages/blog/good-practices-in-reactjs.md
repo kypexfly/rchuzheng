@@ -1,14 +1,18 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: 'Good practices in React.js (outdated)'
+title: 'Good practices in React.js'
 pubDate: 2022-07-01
-description: "- Outdated - some practices are not used anymore."
+description: "Quick five good practices you can apply to your React projects."
 author: "Ricardo Chu"
 image:
   url: "https://images.unsplash.com/photo-1629948618343-0d33f97a3091?ixlib=rb-4.0.3&q=85&fm=jpg"
   alt: "Abstract image"
 tags: ["javascript", "react"]
 ---
+
+<div class='flex gap-2 items-center p-3 rounded bg-slate-300/40 dark:bg-slate-700/40'>
+  <strong>Last Update:</strong> April 22, 2023
+</div>
 
 ## Qué son las buenas prácticas
 
@@ -64,6 +68,10 @@ const Component = () => {
 ~~~
 
 ### Mantener la lógica de negocio y la presentación separadas
+
+  <div class='flex gap-2 items-center p-3 rounded bg-slate-300/40 dark:bg-slate-700/40'>
+    <strong>¡Atención!</strong> Gracias a los custom hooks, ya no es necesario separar la lógica y presentación con componentes.
+  </div>
 
 Los componentes de presentación (también llamados componentes de vista) son aquellos que se encargan de cómo se muestran los datos en la interfaz de usuario. Estos componentes suelen ser "puros", es decir, no tienen estado interno y se renderizan de manera determinista en función de sus props.
 
