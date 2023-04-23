@@ -9,8 +9,8 @@ const sortedByDateProjects = allPost
     if (a.frontmatter.pubDate < b.frontmatter.pubDate) return 1
     return 0
   })
-  .slice(0, 8)
   .filter((post) => post.frontmatter.title != currentPostTitle)
+  .slice(0, 8)
 ---
 
 <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -22,9 +22,9 @@ const sortedByDateProjects = allPost
       return (
         <a
           href={post.url}
-          class='rounded p-3 border  dark:border-zinc-800 hover:scale-105 transition-transform hover:transition-transform flex flex-col sm:flex-row gap-3 items-center'
+          class='rounded p-3 border dark:border-zinc-800 hover:scale-105 transition-transform hover:transition-transform flex flex-col xs:flex-row gap-3 items-center'
         >
-          <Image alt={image.alt} src={image.url} width={200} height={100} class='w-full basis-44 object-cover h-24 rounded' />
+          <Image alt={image.alt} src={image.url} width={480} height={240} class='w-full basis-44 object-cover h-24 rounded' />
           <h3 class='font-bold text-xl flex-1'>{title}</h3>
         </a>
       )
