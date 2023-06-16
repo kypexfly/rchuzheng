@@ -1,9 +1,6 @@
 "use client";
 
-import { socialList } from "@/lib/constants";
-
-import Image from "next/image";
-import Link from "next/link";
+import { routes, socialList } from "@/lib/constants";
 import { NavLink } from "./navlink";
 
 export function Navbar() {
@@ -12,15 +9,11 @@ export function Navbar() {
       <div className="container w-full flex flex-row justify-between">
         <nav>
           <ul className="flex gap-4 [&_a]:font-bold [&_a]:text-sm">
-            <li>
-              <NavLink href="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink href="/projects">Projects</NavLink>
-            </li>
-            <li>
-              <NavLink href="/blog">Blog</NavLink>
-            </li>
+            {routes.map((route) => (
+              <li key={route.path}>
+                <NavLink href={route.path}>{route.name}</NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
         <ul className="flex gap-3 items-center">

@@ -12,7 +12,7 @@ interface NavLinkProps {
 export function NavLink({ children, href }: NavLinkProps) {
   const pathname = usePathname();
   return (
-    <Link className={cn("text-muted-foreground px-2 py-2 border-b-2 border-b-transparent", pathname === href && "text-blue-600 border-b-blue-600")} href={href}>
+    <Link className={cn("text-muted-foreground px-2 py-2", pathname === href && "text-violet-600")} href={href}>
       {children}
     </Link>
   );

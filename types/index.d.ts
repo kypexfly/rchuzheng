@@ -6,6 +6,11 @@ export type Social = {
   icon: Icon;
 };
 
+export type Route = {
+  path: string;
+  name: string;
+};
+
 export type SiteConfig = {
   title: string;
   description: string;
@@ -16,7 +21,7 @@ export type SiteConfig = {
 export type Project = {
   title: string;
   description: string;
-  date?: number;
+  date: string;
   source?: string;
   demo?: string;
   article?: string;

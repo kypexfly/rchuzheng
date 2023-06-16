@@ -74,8 +74,18 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings: "rlig"1, "calt"1;
+  }
+}
+
+@layer components {
+  .link {
+    @apply underline-offset-4 hover:underline text-primary;
+  }
+  .text-gradient-flame {
+    @apply text-transparent bg-clip-text bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-200 via-violet-500 to-sky-700;
   }
 }
