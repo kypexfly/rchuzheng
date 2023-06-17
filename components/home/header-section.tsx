@@ -1,7 +1,7 @@
 export function HeaderSection() {
   return (
     <header className="text-center my-16">
-      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+      <h1 className="text-6xl font-bold tracking-tight">
         <span className="text-gradient-flame">Ricardo Chu</span>
       </h1>
       <h2 className="block mb-3 leading-relaxed text-2xl font-bold text-gray-800 dark:text-white ">

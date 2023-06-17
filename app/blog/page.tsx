@@ -1,6 +1,6 @@
-import ProjectCard from "@/components/project-card";
+import PostCard from "@/components/post-card";
 import { siteConfig } from "@/config/site";
-import { projectList } from "@/lib/constants";
+import { blogListMock } from "@/lib/constants";
 
 export const metadata = {
   title: `Blog | ${siteConfig.title}`,
@@ -14,14 +14,14 @@ export default function Blog() {
           <span className="text-gradient-flame">Blog</span> Posts
         </h1>
         <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-          Personal articles where I share my insights and experiences on various topics, including web development and
-          other interests.
+          Sharing insights and experiences on various topics like software development, machine learning and
+          engineering.
         </p>
       </header>
 
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {projectList.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+      <div className="grid grid-cols-1 gap-6">
+        {blogListMock.map((post) => (
+          <PostCard key={post.title} {...post} />
         ))}
       </div>
     </>

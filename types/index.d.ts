@@ -28,3 +28,10 @@ export type Project = {
   tech?: string[];
   highlight?: boolean;
 };
+
+export type Post = {
+  title: string;
+  description: string;
+  date: string;
+  src: string;
+};
