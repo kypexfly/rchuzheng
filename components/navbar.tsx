@@ -16,43 +16,9 @@ import { buttonVariants } from "./ui/button";
 
 export function Navbar() {
   return (
-    <header className="bg-slate-900/50 border-b backdrop-blur-md px-2 py-4 sticky top-0 z-10">
-      <div className="sm:hidden container">
-        <NavigationMenu className="justify-start">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent">
-                <Menu2 size={22} />
-              </NavigationMenuTrigger>
+    <header className="bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
+      <MobileMenu />
 
-              <NavigationMenuContent>
-                <ul className="grid grid-cols-1 w-[300px] gap-3 p-2 md:w-[500px] lg:w-[600px] ">
-                  {routes.map((route) => (
-                    <li key={route.path} className="flex p-2 border-b last:border-0">
-                      <Link href={route.path} legacyBehavior passHref>
-                        <NavigationMenuLink className="flex-1">{route.name}</NavigationMenuLink>
-                      </Link>
-                    </li>
-                  ))}
-                  <li className="flex justify-between gap-3">
-                    {socialList.map((s) => (
-                      <a
-                        key={s.label}
-                        href={s.url}
-                        className={buttonVariants({ variant: "secondary" })}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <s.icon size={22} />
-                      </a>
-                    ))}
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
       <div className="hidden sm:flex container w-full flex-row justify-between">
         <nav>
           <ul className="flex gap-4 [&_a]:font-bold [&_a]:text-sm">
@@ -74,5 +40,46 @@ export function Navbar() {
         </ul>
       </div>
     </header>
+  );
+}
+
+function MobileMenu() {
+  return (
+    <div className="sm:hidden container">
+      <NavigationMenu className="justify-start">
+        <NavigationMenuList className="space-x-0">
+          <NavigationMenuItem className="flex items-center">
+            <NavigationMenuTrigger className="bg-transparent p-1 h-auto">
+              <Menu2 size={20} />
+            </NavigationMenuTrigger>
+
+            <NavigationMenuContent>
+              <ul className="grid grid-cols-1 w-[300px] gap-3 p-2 md:w-[500px] lg:w-[600px] ">
+                {routes.map((route) => (
+                  <li key={route.path} className="flex p-2 border-b last:border-0">
+                    <Link href={route.path} legacyBehavior passHref>
+                      <NavigationMenuLink className="flex-1">{route.name}</NavigationMenuLink>
+                    </Link>
+                  </li>
+                ))}
+                <li className="flex justify-between gap-3">
+                  {socialList.map((s) => (
+                    <a
+                      key={s.label}
+                      href={s.url}
+                      className={buttonVariants({ variant: "secondary" })}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <s.icon size={22} />
+                    </a>
+                  ))}
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
 }
