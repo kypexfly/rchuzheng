@@ -1,5 +1,5 @@
-import { WrapperTransition } from "@/components/wrapper-transition";
+import { RouteAnimate } from "@/components/route-animate";
 
 export default function RootTemplate({ children }: { children: React.ReactNode }) {
-  return <WrapperTransition>{children}</WrapperTransition>;
+  return <RouteAnimate>{children}</RouteAnimate>;
 }

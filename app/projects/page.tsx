@@ -11,7 +11,7 @@ export default function Projects() {
     <>
       <section className="mb-16">
         <header className="text-center sm:text-left my-8">
-          <h1 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
             <span className="text-gradient-flame">Featured</span> Projects
           </h1>
           <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
