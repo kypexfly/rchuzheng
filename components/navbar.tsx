@@ -1,49 +1,50 @@
 "use client";
 
-import { routes, socialList } from "@/lib/constants";
-import { NavLink } from "./navlink";
-import { Menu2 } from "tabler-icons-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { routes, socialList } from "@/lib/constants";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Menu2 } from "tabler-icons-react";
+import { NavLink } from "./navlink";
+import { buttonVariants } from "./ui/button";
 
 export function Navbar() {
   return (
     <header className="bg-slate-900/50 border-b backdrop-blur-md px-2 py-4 sticky top-0 z-10">
-      <div className="flex flex-start sm:hidden container">
-        <NavigationMenu>
+      <div className="sm:hidden container">
+        <NavigationMenu className="justify-start">
           <NavigationMenuList>
-            <NavigationMenuItem className="flex justify-start items-start">
-              <NavigationMenuTrigger>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="bg-transparent">
                 <Menu2 size={22} />
               </NavigationMenuTrigger>
 
               <NavigationMenuContent>
-                <ul className="grid grid-cols-1 w-[320px] gap-3 p-2 md:w-[500px] lg:w-[600px] ">
+                <ul className="grid grid-cols-1 w-[300px] gap-3 p-2 md:w-[500px] lg:w-[600px] ">
                   {routes.map((route) => (
-                    <li key={route.path} className="flex">
+                    <li key={route.path} className="flex p-2 border-b last:border-0">
                       <Link href={route.path} legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>{route.name}</NavigationMenuLink>
+                        <NavigationMenuLink className="flex-1">{route.name}</NavigationMenuLink>
                       </Link>
                     </li>
                   ))}
                   <li className="flex justify-between gap-3">
                     {socialList.map((s) => (
-                      <Button variant="secondary" key={s.label} className="flex-1">
-                        <a href={s.url} target="_blank" rel="noopener noreferrer">
-                          <s.icon size={22} />
-                        </a>
-                      </Button>
+                      <a
+                        key={s.label}
+                        href={s.url}
+                        className={buttonVariants({ variant: "secondary" })}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <s.icon size={22} />
+                      </a>
                     ))}
                   </li>
                 </ul>
