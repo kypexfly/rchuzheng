@@ -29,9 +29,9 @@ export type Project = {
   highlight?: boolean;
 };
 
-export type Post = {
-  title: string;
-  description: string;
-  date: string;
-  src: string;
-};
+// export type Post = {
+//   title: string;
+//   description: string;
+//   date: string;
+//   src: string;
+// };
