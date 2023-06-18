@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { siteConfig } from "@/config/site";
 import { socialList } from "@/data";
 import Image from "next/image";
 import { ExternalLink } from "tabler-icons-react";
+
+export const metadata = {
+  title: `About me | ${siteConfig.title}`,
+};
 
 export default function About() {
   return (
