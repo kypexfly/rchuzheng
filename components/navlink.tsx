@@ -2,10 +2,9 @@ import { cn, isCurrentPathOrChild } from "@/lib/utils";
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
 
 interface NavLinkProps {
-  children?: ReactNode;
+  children?: React.ReactNode;
   href: Url;
 }
 
