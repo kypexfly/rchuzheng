@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
-
 import { cn } from "@/lib/utils";
+import { MDXComponents } from "mdx/types";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import Image from "next/image";
 
-const components = {
+const components: MDXComponents = {
   h1: ({ className, ...props }) => (
     <h1 className={cn("mt-2 scroll-m-20 text-4xl font-bold tracking-tight", className)} {...props} />
   ),
@@ -69,7 +69,7 @@ const components = {
   code: ({ className, ...props }) => (
     <code className={cn("relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm", className)} {...props} />
   ),
-  Image,
+  Image: ({ alt, ...props }) => <Image alt={alt} {...props} />,
 };
 
 interface MdxProps {

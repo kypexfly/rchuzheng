@@ -11,6 +11,9 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.12)(react@18.2.0)
+  '@types/mdx':
+    specifier: ^2.0.5
+    version: 2.0.5
   '@types/node':
     specifier: 20.3.1
     version: 20.3.1
@@ -47,9 +50,6 @@ dependencies:
   framer-motion:
     specifier: ^10.12.16
     version: 10.12.16(react-dom@18.2.0)(react@18.2.0)
-  install:
-    specifier: ^0.13.0
-    version: 0.13.0
   lucide-react:
     specifier: ^0.244.0
     version: 0.244.0(react@18.2.0)
@@ -3089,11 +3089,6 @@ packages:
 
   /inline-style-parser@0.1.1:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
-    dev: false
-
-  /install@0.13.0:
-    resolution: {integrity: sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==}
-    engines: {node: '>= 0.10'}
     dev: false
 
   /internal-slot@1.0.5:
