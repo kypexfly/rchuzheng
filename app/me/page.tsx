@@ -32,7 +32,7 @@ function Description() {
       </p>
 
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-        I&apos;m a 23-year-old Frontend Developer. From a young age, I have been fascinated by the intricacies of web
+        I&apos;m a 23-year-old Web Developer. From a young age, I have been fascinated by the intricacies of web
         development, exploring programming languages such as Javascript, Python and MATLAB/R for scientific and
         engineering applications.
       </p>
