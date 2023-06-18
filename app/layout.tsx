@@ -1,4 +1,5 @@
-import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/site-footer";
+import { Navbar } from "@/components/site-navbar";
 import { siteConfig } from "@/config/site";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <Navbar />
         <main className="container py-6">{children}</main>
+        <Footer />
       </body>
     </html>
   );

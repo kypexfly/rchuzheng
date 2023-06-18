@@ -8,15 +8,16 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { routes, socialList } from "@/lib/constants";
+import { socialList } from "@/data";
 import Link from "next/link";
 import { Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { buttonVariants } from "./ui/button";
+import { routes } from "@/lib/routes";
 
 export function Navbar() {
   return (
-    <header className="bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
+    <header className="bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
       <MobileMenu />
 
       <div className="hidden sm:flex container w-full flex-row justify-between">

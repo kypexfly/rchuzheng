@@ -10,9 +10,9 @@ interface PostCardProps extends Post {}
 
 export default function PostCard({ title, description, date, src, url }: PostCardProps) {
   return (
-    <Card className="flex flex-row flex-wrap relative overflow-hidden py-0 shadow-2xl border-0 rounded-none">
-      <Link href={url} className="bg-slate-900 aspect-square rounded-lg w-full xs:basis-44 overflow-hidden">
-        <Image className="object-center object-cover w-full h-full" src={src} width="250" height="250" alt={title} />
+    <Card className="flex flex-row items-center flex-wrap relative overflow-hidden py-0 shadow-2xl border-0 rounded-none">
+      <Link href={url} className="hidden sm:flex aspect-square w-full xs:basis-44 overflow-hidden">
+        <Image className="object-center object-cover w-full h-full rounded-full" src={src} width="250" height="250" alt={title} />
       </Link>
 
       <div className="flex-1">

@@ -1,6 +1,7 @@
 import ProjectCard from "@/components/project-card";
 import { siteConfig } from "@/config/site";
-import { projectList } from "@/lib/constants";
+import { projectList } from "@/data";
+import { Balancer } from "react-wrap-balancer";
 
 export const metadata = {
   title: `Projects | ${siteConfig.title}`,
@@ -9,14 +10,16 @@ export const metadata = {
 export default function Projects() {
   return (
     <>
-      <section className="mb-16">
+      <section className="my-16">
         <header className="text-center sm:text-left my-8">
           <h1 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
             <span className="text-gradient-flame">Featured</span> Projects
           </h1>
           <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-            Projects to showcase my experience in frontend web development, utilizing frameworks and best practices to
-            deliver scalable and responsive solutions.
+            <Balancer>
+              Projects to showcase my experience in frontend web development, utilizing frameworks and best practices to
+              deliver scalable and responsive solutions.
+            </Balancer>
           </p>
         </header>
 
@@ -29,7 +32,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section>
+      <section className="my-16">
         <header className="text-center sm:text-left my-8">
           <h1 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">
             Other Projects

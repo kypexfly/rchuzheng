@@ -1,4 +1,4 @@
-import { projectList } from "@/lib/constants";
+import { projectList } from "@/data";
 import Link from "next/link";
 import ProjectCard from "../project-card";
 import { Section } from "../section";

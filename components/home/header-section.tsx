@@ -1,3 +1,5 @@
+import { Balancer } from "react-wrap-balancer";
+
 export function HeaderSection() {
   return (
     <header className="text-center my-16">
@@ -8,8 +10,10 @@ export function HeaderSection() {
         Frontend Web Developer
       </h2>
       <h3 className="mb-3 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-        Experience with React, Typescript, Node.js and more. <br />
-        Attention to detail, UX and performance.
+        <Balancer>
+          Experience with React, Typescript, Node.js and more. <br />
+          Attention to detail, UX and performance.
+        </Balancer>
       </h3>
       {/*eslint-disable-next-line @next/next/no-img-element*/}
       <img
