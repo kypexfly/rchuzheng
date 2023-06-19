@@ -36,8 +36,9 @@ const components: MDXComponents = {
     <blockquote className={cn("mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground", className)} {...props} />
   ),
   img: ({ className, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    // To make lazy loading height and width need to be specified.
     // eslint-disable-next-line @next/next/no-img-element
-    <img className={className} alt={alt} {...props} />
+    <img className={className} alt={alt} loading="lazy" {...props} />
   ),
   hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
