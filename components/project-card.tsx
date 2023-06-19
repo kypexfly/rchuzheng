@@ -21,7 +21,7 @@ export default function ProjectCard({ title, description, article, date, demo, s
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900/25 py-3 shadow-2xl"
+      className="flex flex-col relative overflow-hidden rounded-xl border dark:border-slate-800 dark:bg-slate-900/25 py-3 shadow-2xl"
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
@@ -34,7 +34,6 @@ export default function ProjectCard({ title, description, article, date, demo, s
         <CardTitle className="mb-2">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      {/* <CardContent className="mb-auto"><p>Card Content</p></CardContent> */}
       <CardFooter className="mt-auto flex gap-6 flex-wrap [&_.icon]:ml-1 [&>a]:px-0">
         {article && (
           <Link href={article} className={buttonVariants({ variant: "link", size: "sm" })}>

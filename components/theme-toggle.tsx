@@ -6,26 +6,16 @@ import { Sun, Moon } from "tabler-icons-react";
 import { Button } from "./ui/button";
 
 export function ThemeToggler() {
-  const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  const toggleTheme = () => {
-    currentTheme === "dark" ? setTheme("light") : setTheme("dark");
-  };
+  const toggleTheme = () => (currentTheme === "dark" ? setTheme("light") : setTheme("dark"));
 
   return (
-    <Button variant="secondary" onClick={toggleTheme}>
-      {currentTheme === "dark" ? <Sun /> : <Moon />}
-    </Button>
+    <button className="py-0 flex justify-center w-8 border-l" onClick={toggleTheme}>
+      <Sun className="rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" size={22} />
+      <Moon className="absolute rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" size={22} />
+    </button>
   );
 }

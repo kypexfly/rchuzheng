@@ -18,11 +18,22 @@ import { ThemeToggler } from "./theme-toggle";
 
 export function Navbar() {
   return (
-    <header className="bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
-      <div className="container">
+    <header className="bg-slate-100/50 border-b-slate-300/25 dark:bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
+      <div className="container flex justify-between items-center">
         <MobileMenu />
         <DesktopMenu />
-        <ThemeToggler />
+        <ul className="flex gap-3 items-center">
+          {socialList.map((s) => (
+            <li key={s.label} className="hover:text-blue-600 text-muted-foreground">
+              <a href={s.url} target="_blank" rel="noopener noreferrer">
+                <s.icon size={22} />
+              </a>
+            </li>
+          ))}
+          <li className="hover:text-blue-600 text-muted-foreground">
+            <ThemeToggler />
+          </li>
+        </ul>
       </div>
     </header>
   );
@@ -47,23 +58,10 @@ function MobileMenu() {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <a href="/cv.pdf" className="flex-1 p-2" target="_blank" rel="noopener noreferrer">
+                <li className="flex p-2">
+                  <a href="/cv.pdf" className="flex-1" target="_blank" rel="noopener noreferrer">
                     Resume
                   </a>
-                </li>
-                <li className="flex justify-between gap-3">
-                  {socialList.map((s) => (
-                    <a
-                      key={s.label}
-                      href={s.url}
-                      className={buttonVariants({ variant: "secondary" })}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <s.icon size={22} />
-                    </a>
-                  ))}
                 </li>
               </ul>
             </NavigationMenuContent>
@@ -92,15 +90,6 @@ function DesktopMenu() {
           </li>
         </ul>
       </nav>
-      <ul className="flex gap-3 items-center">
-        {socialList.map((s) => (
-          <li key={s.label} className="hover:text-blue-600 text-muted-foreground">
-            <a href={s.url} target="_blank" rel="noopener noreferrer">
-              <s.icon size={22} />
-            </a>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
