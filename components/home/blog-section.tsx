@@ -19,7 +19,7 @@ export function BlogSection() {
       <div className="grid">
         {posts.slice(0, 7).map((post) => (
           <Link key={post.title} className="py-2 border-b last:border-b-0 flex gap-2" href={post.url}>
-            <h3 className="link">{post.title}</h3>
+            <h3>{post.title}</h3>
             <time className="ml-auto text-muted-foreground text-sm hidden md:block">
               {format(parseISO(post.date), "LLLL d, yyyy")}
             </time>
