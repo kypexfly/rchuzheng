@@ -14,19 +14,23 @@ import Link from "next/link";
 import { Download, Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { buttonVariants } from "./ui/button";
+import { ThemeToggler } from "./theme-toggle";
 
 export function Navbar() {
   return (
     <header className="bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
-      <MobileMenu />
-      <DesktopMenu />
+      <div className="container">
+        <MobileMenu />
+        <DesktopMenu />
+        <ThemeToggler />
+      </div>
     </header>
   );
 }
 
 function MobileMenu() {
   return (
-    <div className="sm:hidden container">
+    <div className="sm:hidden">
       <NavigationMenu className="justify-start">
         <NavigationMenuList className="space-x-0">
           <NavigationMenuItem className="flex items-center">
@@ -72,7 +76,7 @@ function MobileMenu() {
 
 function DesktopMenu() {
   return (
-    <div className="hidden sm:flex container w-full flex-row justify-between">
+    <div className="hidden sm:flex w-full flex-row justify-between">
       <nav>
         <ul className="flex gap-4 [&_a]:font-bold [&_a]:text-sm">
           {routes.map((route) => (

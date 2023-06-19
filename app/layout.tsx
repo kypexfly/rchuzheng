@@ -1,9 +1,10 @@
+import "../styles/globals.css";
 import { Footer } from "@/components/site-footer";
 import { Navbar } from "@/components/site-navbar";
 import { siteConfig } from "@/config/site";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import "../styles/globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,13 +15,15 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
-        <Navbar />
-        <main className="container py-6">{children}</main>
-        <Footer />
-        <Analytics />
-      </body>
+    <html lang="en">
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <body className={inter.className}>
+          <Navbar />
+          <main className="container py-6">{children}</main>
+          <Footer />
+          <Analytics />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
