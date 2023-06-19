@@ -13,7 +13,6 @@ import { routes } from "@/lib/routes";
 import Link from "next/link";
 import { Download, Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
-import { buttonVariants } from "./ui/button";
 import { ThemeToggler } from "./theme-toggle";
 
 export function Navbar() {
@@ -25,7 +24,7 @@ export function Navbar() {
         <ul className="flex gap-3 items-center">
           {socialList.map((s) => (
             <li key={s.label} className="hover:text-blue-600 text-muted-foreground">
-              <a href={s.url} target="_blank" rel="noopener noreferrer">
+              <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${s.label} to a new tab`}>
                 <s.icon size={22} />
               </a>
             </li>
@@ -45,7 +44,7 @@ function MobileMenu() {
       <NavigationMenu className="justify-start">
         <NavigationMenuList className="space-x-0">
           <NavigationMenuItem className="flex items-center">
-            <NavigationMenuTrigger className="bg-transparent p-1 h-auto">
+            <NavigationMenuTrigger aria-label="Open navigation menu" className="bg-transparent p-1 h-auto">
               <Menu2 size={20} />
             </NavigationMenuTrigger>
 

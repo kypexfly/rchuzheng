@@ -98,7 +98,7 @@ function Education() {
       <ol className="relative border-l border-gray-200 dark:border-gray-700">
         <li className="mb-10 ml-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             March 2023 - Present
           </time>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Backend with Java</h3>
@@ -108,7 +108,7 @@ function Education() {
         </li>
         <li className="mb-10 ml-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             November 2017 - January 2023
           </time>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Electrical Engineer</h3>
@@ -118,7 +118,7 @@ function Education() {
         </li>
         <li className="ml-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             August 2021 - November 2021
           </time>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Web Developer</h3>
