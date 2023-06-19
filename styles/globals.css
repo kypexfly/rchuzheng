@@ -81,7 +81,7 @@
   }
 
   body::before {
-    @apply content-[''] bg-blue-500/10 blur-[100px] -z-[-1] top-24 -left-12 absolute h-96 w-96
+    @apply content-[''] bg-blue-500/10 blur-[100px] -z-[-1] top-24 -left-12 absolute h-96 w-96 pointer-events-none;
 
   }
 }
