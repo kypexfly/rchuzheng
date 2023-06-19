@@ -24,7 +24,7 @@ export default function PostCard({ title, description, date, src, url }: PostCar
             <Link href={url}>{title}</Link>
           </CardTitle>
         </CardHeader>
-        <CardContent className="px-0 sm:p-6">
+        <CardContent className="px-0 sm:pt-0 sm:px-6">
           <p>{description}</p>
         </CardContent>
       </div>
