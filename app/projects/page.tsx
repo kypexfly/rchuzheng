@@ -1,9 +1,10 @@
 import ProjectCard from "@/components/project-card";
 import { siteConfig } from "@/config/site";
 import { projectList } from "@/data";
+import { Metadata } from "next";
 import { Balancer } from "react-wrap-balancer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `Projects | ${siteConfig.title}`,
 };
 

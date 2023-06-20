@@ -4,18 +4,14 @@ import { notFound } from "next/navigation";
 import { allPosts } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
 import "@/styles/mdx.css";
+import { Metadata } from "next";
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = ({ params }: { params: { slug: string } }): Metadata => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
-  // TODO: Post not found is not being returned
-  if (!post) {
-    return {
-      title: "Post not found",
-    };
-  }
+  if (!post) return notFound();
 
   return { title: post.title };
 };

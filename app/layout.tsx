@@ -5,10 +5,11 @@ import { siteConfig } from "@/config/site";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
 };

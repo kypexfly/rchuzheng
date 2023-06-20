@@ -4,8 +4,9 @@ import { siteConfig } from "@/config/site";
 import { socialList } from "@/data";
 import Image from "next/image";
 import { ExternalLink } from "tabler-icons-react";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `About me | ${siteConfig.title}`,
 };
 
@@ -24,7 +25,13 @@ function Description() {
   return (
     <section className="my-16">
       <h1 className="text-center sm:text-left mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
-        <Image src="/me.png" alt="Ricardo Chu photo" className="rounded-full block mx-auto mb-3 xs:inline xs:mr-3" width="80" height="80" />
+        <Image
+          src="/me.png"
+          alt="Ricardo Chu photo"
+          className="rounded-full block mx-auto mb-3 xs:inline xs:mr-3"
+          width="80"
+          height="80"
+        />
         <span className="text-gradient-flame">About</span> Me
       </h1>
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
