@@ -20,7 +20,7 @@ export const socialList: Social[] = [
   },
   {
     label: "Email",
-    url: "mailto:rczgraphics@live.com",
+    url: "mailto:rchuzheng@gmail.com",
     icon: Mail,
   },
 ];
