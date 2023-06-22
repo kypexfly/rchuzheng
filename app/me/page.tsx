@@ -46,7 +46,7 @@ function Description() {
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
         I have managed graphic design communities for over 5 years. Throughout my career, conducted research projects on
         topics such as the sizing of residential photovoltaic systems and analyzing the harmonics of electric vehicles
-        in distribution networks. I have a strong passion for learning and am always seeking new knowledge and
+        in distribution networks. A strong passion for learning and always seeking new knowledge and
         experiences.
       </p>
 
