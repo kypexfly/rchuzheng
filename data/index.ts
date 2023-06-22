@@ -90,7 +90,7 @@ export const projectList: Project[] = [
     title: "Economic Load Dispatch algorithm",
     description: "Algorithm based on Power Generation, Operation, and Control by Allen J. Wood.",
     date: "2022",
-    source: "https://github.com/kypexfly/frontend-mentor-challenges",
+    source: "https://github.com/kypexfly/economic-load-dispatch",
     tech: ["python, matlab"],
   },
 ];
