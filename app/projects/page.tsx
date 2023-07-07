@@ -28,7 +28,7 @@ export default function Projects() {
           {projectList
             .filter((p) => p.highlight)
             .map((project) => (
-              <ProjectCard key={project.title} {...project} />
+              <ProjectCard showCover key={project.title} {...project} />
             ))}
         </div>
       </section>

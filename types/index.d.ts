@@ -23,6 +23,7 @@ export type Project = {
   description: string;
   date: string;
   source?: string;
+  cover?: string;
   demo?: string;
   article?: string;
   tech?: string[];
