@@ -76,6 +76,13 @@ export const projectList: Project[] = [
     highlight: true,
   },
   {
+    title: "Learning and testing",
+    description: "A repository to test libraries, frameworks, and tools for improving skills.",
+    date: "2023",
+    source: "https://github.com/kypexfly/learn",
+    tech: ["learning", "tools", "testing", "libraries"],
+  },
+  {
     title: "Epic Seven Index",
     description: "Library of heroes and artifacts for the Epic Seven mobile game.",
     date: "2022",
