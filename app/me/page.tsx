@@ -39,20 +39,27 @@ function Description() {
       </p>
 
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-        I&apos;m a 23-year-old Web Developer. From a young age, I have been fascinated by the intricacies of web
-        development, exploring programming languages such as Javascript, Python and MATLAB/R for scientific and
-        engineering applications.
+        I&apos;m a 23-year-old Web Developer. From a young age, I have been fascinated by the
+        intricacies of web development, exploring programming languages such as Javascript, Python
+        and MATLAB/R for scientific and engineering applications.
       </p>
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-        I have managed graphic design communities for over 5 years. Throughout my career, conducted research projects on
-        topics such as the sizing of residential photovoltaic systems and analyzing the harmonics of electric vehicles
-        in distribution networks. A strong passion for learning and always seeking new knowledge and experiences.
+        I have managed graphic design communities for over 5 years. Throughout my career, conducted
+        research projects on topics such as the sizing of residential photovoltaic systems and
+        analyzing the harmonics of electric vehicles in distribution networks. A strong passion for
+        learning and always seeking new knowledge and experiences.
       </p>
 
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
         You can contact me in any of the following ways: <br />
         {socialList.map((s) => (
-          <a key={s.label} href={s.url} className="flex gap-2 link" target="_blank" rel="noopener noreferrer">
+          <a
+            key={s.label}
+            href={s.url}
+            className="flex gap-2 link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <s.icon /> {s.label}{" "}
           </a>
         ))}
@@ -99,6 +106,19 @@ function Skills() {
           <li>Strapi</li>
         </ul>
       </div>
+
+      <p className="mt-6">
+        I&apos;m also a graphic artist,{" "}
+        <a
+          href="https://art.ricardochu.com/"
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          take a look
+        </a>
+        {" "} at my work!
+      </p>
     </section>
   );
 }
@@ -106,7 +126,9 @@ function Skills() {
 function Education() {
   return (
     <section className="my-16">
-      <h2 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">🎓 Education</h2>
+      <h2 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">
+        🎓 Education
+      </h2>
       <ol className="relative border-l border-gray-200 dark:border-gray-700">
         <li className="mb-10 ml-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
@@ -123,7 +145,9 @@ function Education() {
           <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             November 2017 - January 2023
           </time>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Electrical Engineer</h3>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+            Electrical Engineer
+          </h3>
           <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
             Universidad Técnica Estatal de Quevedo
           </p>
@@ -134,7 +158,9 @@ function Education() {
             August 2021 - November 2021
           </time>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Web Developer</h3>
-          <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">ZTM Academy</p>
+          <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
+            ZTM Academy
+          </p>
         </li>
       </ol>
     </section>
@@ -144,17 +170,22 @@ function Education() {
 function Articles() {
   return (
     <section className="my-16">
-      <h2 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">📃 Articles</h2>
+      <h2 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">
+        📃 Articles
+      </h2>
 
       <Card>
         <CardHeader>
-          <CardTitle>Sizing of a Photovoltaic System in the City of Quevedo for Residential Use</CardTitle>
+          <CardTitle>
+            Sizing of a Photovoltaic System in the City of Quevedo for Residential Use
+          </CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4">
           <CardDescription>
-            The sizing of a small photovoltaic system of a residence in the city of Quevedo is presented, with the
-            objective of analyzing solar photovoltaic installations as a measure to promote the use of distributed
-            generation in homes and the reduction of costs to be paid for electricity consumption.
+            The sizing of a small photovoltaic system of a residence in the city of Quevedo is
+            presented, with the objective of analyzing solar photovoltaic installations as a measure
+            to promote the use of distributed generation in homes and the reduction of costs to be
+            paid for electricity consumption.
           </CardDescription>
           <Button variant="outline" size="sm" asChild>
             <a
