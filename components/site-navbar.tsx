@@ -15,6 +15,8 @@ import { Download, Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
 
+const CV_URL = "https://drive.google.com/file/d/14H9x8IYuoanBUvieAVoYyRnl1oFYuarg/view?usp=sharing";
+
 export function Navbar() {
   return (
     <header className="bg-slate-100/50 border-b-slate-300/25 dark:bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
@@ -24,7 +26,12 @@ export function Navbar() {
         <ul className="flex gap-3 items-center">
           {socialList.map((s) => (
             <li key={s.label} className="hover:text-blue-600 text-muted-foreground">
-              <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${s.label} to a new tab`}>
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${s.label} to a new tab`}
+              >
                 <s.icon size={22} />
               </a>
             </li>
@@ -44,7 +51,10 @@ function MobileMenu() {
       <NavigationMenu className="justify-start">
         <NavigationMenuList className="space-x-0">
           <NavigationMenuItem className="flex items-center">
-            <NavigationMenuTrigger aria-label="Open navigation menu" className="bg-transparent p-1 h-auto">
+            <NavigationMenuTrigger
+              aria-label="Open navigation menu"
+              className="bg-transparent p-1 h-auto"
+            >
               <Menu2 size={20} />
             </NavigationMenuTrigger>
 
@@ -58,7 +68,7 @@ function MobileMenu() {
                   </li>
                 ))}
                 <li className="flex p-2">
-                  <a href="/cv.pdf" className="flex-1" target="_blank" rel="noopener noreferrer">
+                  <a href={CV_URL} className="flex-1" target="_blank" rel="noopener noreferrer">
                     Resume
                   </a>
                 </li>
@@ -82,7 +92,12 @@ function DesktopMenu() {
             </li>
           ))}
           <li>
-            <a href="/cv.pdf" className="text-muted-foreground px-2 py-2" target="_blank" rel="noopener noreferrer">
+            <a
+              href={CV_URL}
+              className="text-muted-foreground px-2 py-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Cv
               <Download className="inline-block ml-1" size={18} />{" "}
             </a>
