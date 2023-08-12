@@ -46,8 +46,7 @@ function Description() {
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
         I have managed graphic design communities for over 5 years. Throughout my career, conducted research projects on
         topics such as the sizing of residential photovoltaic systems and analyzing the harmonics of electric vehicles
-        in distribution networks. A strong passion for learning and always seeking new knowledge and
-        experiences.
+        in distribution networks. A strong passion for learning and always seeking new knowledge and experiences.
       </p>
 
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -78,14 +77,20 @@ function Skills() {
           <li>MongoDB</li>
         </ul>
         <ul className="font-normal text-gray-700 dark:text-gray-300 leading-relaxed list-inside list-disc">
-          <li>React Query</li>
           <li>Zustand</li>
-          <li>Tailwind</li>
-          <li>Git, Github</li>
+          <li>React Query</li>
+          <li>Redux Toolkit</li>
+          <li>RTK Query</li>
+          <li>MaterialUI</li>
+          <li>TailwindCSS</li>
+          <li>Git & Github</li>
           <li>Framer Motion</li>
           <li>JWT Auth</li>
         </ul>
         <ul className="font-normal text-gray-700 dark:text-gray-300 leading-relaxed list-inside list-disc">
+          <li>React Hook Form</li>
+          <li>Jest</li>
+          <li>Vitest</li>
           <li>ESLint, Prettier</li>
           <li>Docker</li>
           <li>Javascript</li>
