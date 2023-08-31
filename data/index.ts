@@ -26,23 +26,25 @@ export const socialList: Social[] = [
 
 export const projectList: Project[] = [
   {
-    title: "ricardochu.com",
-    description: "Personal website, portfolio and blog. Next.js 13 with App Router API and SSR.",
-    date: "2023",
-    source: "https://github.com/kypexfly/ricardochu",
-    demo: "https://www.ricardochu.com",
-    tech: ["next", "typescript", "tailwind", "contentlayer"],
-    cover: "/img/cover-portfolio.jpg",
-    highlight: true,
-  },
-  {
     title: "Dev.to Clone",
-    description: "Fullstack app clone of Dev.to. Create posts, comment, share your profile and more.",
+    description:
+      "Fullstack app clone of Dev.to. Create posts, comment, share your profile and more.",
     date: "2023",
     source: "https://github.com/kypexfly/devto-clone",
     demo: "https://devclone23.vercel.app",
-    tech: ["next", "react-hook-form", "oauth", "mdx", "zod"],
+    tech: ["next", "react-hook-form", "postgresql", "oauth", "mdx", "zod"],
     cover: "/img/cover-devto-clone.jpg",
+    highlight: true,
+  },
+  {
+    title: "AI Playground (Work In Progress)",
+    description:
+      "Explore amazing apps powered by Artificial Intelligence and Large Language Models.",
+    date: "2023",
+    source: "https://github.com/kypexfly/ai-playground",
+    demo: "https://ai.ricardochu.com",
+    tech: ["next", "typescript", "langchain", "ai"],
+    cover: "/img/cover-ai-playground.jpg",
     highlight: true,
   },
   {
@@ -66,16 +68,6 @@ export const projectList: Project[] = [
     highlight: true,
   },
   {
-    title: "To-Do App",
-    description: "A To-Do App with task completion, sort options, and local storage.",
-    date: "2022",
-    source: "https://github.com/kypexfly/todo-app-ts",
-    demo: "https://react-todoapp-ts.netlify.app/",
-    tech: ["react", "typescript", "tailwind", "zustand"],
-    cover: "/img/cover-todo-app-2.jpg",
-    highlight: true,
-  },
-  {
     title: "Currency Converter",
     description: "Real-time currency conversion with more than 150 options.",
     date: "2023",
@@ -86,6 +78,26 @@ export const projectList: Project[] = [
     highlight: true,
   },
   {
+    title: "ricardochu.com",
+    description: "Personal website, portfolio and blog. Next.js 13 with App Router API and SSR.",
+    date: "2023",
+    source: "https://github.com/kypexfly/ricardochu",
+    demo: "https://www.ricardochu.com",
+    tech: ["next", "typescript", "tailwind", "contentlayer"],
+    cover: "/img/cover-portfolio.jpg",
+    highlight: true,
+  },
+  {
+    title: "To-Do App",
+    description: "A To-Do App with task completion, sort options, and local storage.",
+    date: "2022",
+    source: "https://github.com/kypexfly/todo-app-ts",
+    demo: "https://react-todoapp-ts.netlify.app/",
+    tech: ["react", "typescript", "tailwind", "zustand"],
+    cover: "/img/cover-todo-app.jpg",
+    highlight: true,
+  },
+  {
     title: "Epic Seven Index",
     description: "Library of heroes and artifacts for the Epic Seven mobile game.",
     date: "2022",
@@ -93,6 +105,7 @@ export const projectList: Project[] = [
     demo: "https://epic7index.netlify.app",
     tech: ["react", "typescript", "tailwindcss"],
     cover: "/img/cover-epic7index.jpg",
+    highlight: true,
   },
   {
     title: "ricardochu.com v4",

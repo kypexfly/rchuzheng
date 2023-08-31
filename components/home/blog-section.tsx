@@ -3,6 +3,7 @@ import { compareDesc, format, parseISO } from "date-fns";
 import Link from "next/link";
 import { Section } from "../section";
 import { buttonVariants } from "../ui/button";
+import PostCard from "../post-card";
 
 export function BlogSection() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
@@ -18,12 +19,7 @@ export function BlogSection() {
 
       <div className="grid">
         {posts.slice(0, 7).map((post) => (
-          <Link key={post.title} className="py-2 border-b last:border-b-0 flex gap-2" href={post.url}>
-            <h3>{post.title}</h3>
-            <time className="ml-auto text-muted-foreground text-sm hidden md:block">
-              {format(parseISO(post.date), "LLLL d, yyyy")}
-            </time>
-          </Link>
+          <PostCard key={post.title} {...post} />
         ))}
       </div>
     </Section>

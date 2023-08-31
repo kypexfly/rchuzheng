@@ -11,7 +11,7 @@ import {
 import { socialList } from "@/data";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
-import { Download, Menu2 } from "tabler-icons-react";
+import { ExternalLink, Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
 
@@ -99,7 +99,7 @@ function DesktopMenu() {
               rel="noopener noreferrer"
             >
               Cv
-              <Download className="inline-block ml-1" size={18} />{" "}
+              <ExternalLink className="inline-block ml-1" size={18} />{" "}
             </a>
           </li>
         </ul>
