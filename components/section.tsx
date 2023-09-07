@@ -1,5 +1,8 @@
+import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
-export function Section({ children }: { children: ReactNode }) {
-  return <section className="my-16">{children}</section>;
+interface SectionProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function Section({ children, className }: SectionProps) {
+  return <section className={cn("my-16", className)}>{children}</section>;
 }
