@@ -1,6 +1,4 @@
-import { BlogSection } from "@/components/home/blog-section";
-import { HeaderSection } from "@/components/home/header-section";
-import { ProjectSection } from "@/components/home/project-section";
+import { BlogSection, ContactSection, HeaderSection, ProjectSection } from "@/components/home";
 
 export default function Home() {
   return (
@@ -8,6 +6,7 @@ export default function Home() {
       <HeaderSection />
       <ProjectSection />
       <BlogSection />
+      <ContactSection />
     </>
   );
 }
