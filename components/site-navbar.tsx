@@ -15,7 +15,7 @@ import { ExternalLink, Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
 
-const CV_URL = "https://drive.google.com/file/d/14H9x8IYuoanBUvieAVoYyRnl1oFYuarg/view?usp=sharing";
+const CV_URL = "https://drive.google.com/file/d/1QUC9P8ZYpSCGvAPiYXM_bRs5Bx5W_LCJ/view?usp=sharing";
 
 export function Navbar() {
   return (

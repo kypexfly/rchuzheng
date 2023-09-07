@@ -82,24 +82,27 @@ function Skills() {
           <li>Node</li>
           <li>PostgreSQL</li>
           <li>MongoDB</li>
+          <li>a11y</li>
+          <li>i18n</li>
+          <li>GraphQL</li>
         </ul>
         <ul className="font-normal text-gray-700 dark:text-gray-300 leading-relaxed list-inside list-disc">
           <li>Zustand</li>
           <li>React Query</li>
           <li>Redux Toolkit</li>
-          <li>RTK Query</li>
           <li>MaterialUI</li>
           <li>TailwindCSS</li>
           <li>Git & Github</li>
           <li>Framer Motion</li>
           <li>JWT Auth</li>
+          <li>React Hook Form</li>
         </ul>
         <ul className="font-normal text-gray-700 dark:text-gray-300 leading-relaxed list-inside list-disc">
-          <li>React Hook Form</li>
           <li>Jest</li>
           <li>Vitest</li>
           <li>ESLint, Prettier</li>
           <li>Docker</li>
+          <li>Docker Compose</li>
           <li>Javascript</li>
           <li>Python, Java</li>
           <li>Prisma</li>
@@ -116,8 +119,8 @@ function Skills() {
           rel="noopener noreferrer"
         >
           take a look
-        </a>
-        {" "} at my work!
+        </a>{" "}
+        at my work!
       </p>
     </section>
   );

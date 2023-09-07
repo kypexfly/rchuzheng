@@ -7,7 +7,7 @@ export function HeaderSection() {
         <span className="text-gradient-flame">Ricardo Chu</span>
       </h1>
       <h2 className="block mb-3 leading-relaxed text-2xl font-bold text-gray-800 dark:text-white ">
-        Frontend Developer
+        FullStack Developer
       </h2>
       <h3 className="mb-3 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
         <Balancer>
