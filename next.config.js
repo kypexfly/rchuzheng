@@ -1,4 +1,4 @@
-const { withContentlayer } = require('next-contentlayer')
+const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,9 +9,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['images.unsplash.com', 'imgur.com'],
+    domains: ["images.unsplash.com"],
   },
   swcMinify: true,
-}
+};
 
-module.exports = withContentlayer(nextConfig)
+module.exports = withContentlayer(nextConfig);

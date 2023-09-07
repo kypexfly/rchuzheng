@@ -40,7 +40,6 @@ export function ContactSection() {
         body: JSON.stringify(payload),
       });
 
-      console.log(response);
       if (response.ok) {
         setForm(initialFormState);
         setIsError(false);
