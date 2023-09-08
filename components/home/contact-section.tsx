@@ -59,24 +59,30 @@ export function ContactSection() {
         <div className="flex-1 text-muted-foreground">
           Got a question or project in mind? Let&apos;s chat! Reach out through the contact form,
           email, or social media. I&apos;m here to help!
-          <ul className="flex gap-3 mt-3">
+          <div className="h-80">
+            <img
+              className="object-center object-contain w-full h-full"
+              src="https://ouch-cdn2.icons8.com/nf-2-Aan-_Ne-ISSZEZ6h2QoJMt5ALgZ0fxwkMTvP0w/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjg3/LzQzZjA5ZjM3LWRk/MDYtNDlmMi1iZGEx/LTIwMzJjZjczNWJj/NS5wbmc.png"
+              alt=""
+            />
+          </div>
+          <div className="flex gap-3 mt-3 [&>a]:flex-1">
             {socialList.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.url}
-                  target="_blank"
-                  className={buttonVariants({ variant: "secondary" })}
-                  rel="noopener noreferrer"
-                  aria-label={`Open ${s.label} to a new tab`}
-                >
-                  <s.icon size={22} />
-                </a>
-              </li>
+              <a
+                key={s.label}
+                href={s.url}
+                target="_blank"
+                className={buttonVariants({ variant: "secondary" })}
+                rel="noopener noreferrer"
+                aria-label={`Open ${s.label} to a new tab`}
+              >
+                <s.icon size={22} />
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
 
-        <form onSubmit={handleOnSubmit} className="col-span-2 space-y-4 max-w-2xl flex-auto">
+        <form onSubmit={handleOnSubmit} className="space-y-4 max-w-2xl flex-auto">
           <div>
             <Label htmlFor="name" className="mb-3">
               Name
@@ -116,7 +122,7 @@ export function ContactSection() {
             <Textarea
               className="mt-2"
               name="message"
-              rows={5}
+              rows={8}
               placeholder="Message"
               value={form.message}
               onChange={handleOnChange}
