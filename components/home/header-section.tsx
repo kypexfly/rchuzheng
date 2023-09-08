@@ -1,7 +1,6 @@
 import { Balancer } from "react-wrap-balancer";
-import { ExternalLink } from "tabler-icons-react";
 import { buttonVariants } from "../ui/button";
-import Image from "next/image";
+import { Icons } from "../icons";
 
 export function HeaderSection() {
   return (
@@ -43,7 +42,7 @@ export function HeaderSection() {
             rel="noopener noreferrer"
           >
             Resume
-            <ExternalLink className="ml-2" width={18} height={18} />
+            <Icons.extlink className="ml-2" width={18} height={18} />
           </a>
         </div>
       </div>

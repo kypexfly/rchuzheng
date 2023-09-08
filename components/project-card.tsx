@@ -3,11 +3,11 @@
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import useCardSpotlight from "@/hooks/useCardSpotlight";
 import { Project } from "@/types";
-import Link from "next/link";
-import { ExternalLink } from "tabler-icons-react";
-import { buttonVariants } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { Icons } from "./icons";
 import { AspectRatio } from "./ui/aspect-ratio";
+import { buttonVariants } from "./ui/button";
 
 interface ProjectCardProps extends Project {
   showCover?: boolean;
@@ -24,8 +24,16 @@ export default function ProjectCard({
   source,
   tech,
 }: ProjectCardProps) {
-  const { divRef, handleMouseMove, handleFocus, handleBlur, handleMouseEnter, handleMouseLeave, opacity, position } =
-    useCardSpotlight();
+  const {
+    divRef,
+    handleMouseMove,
+    handleFocus,
+    handleBlur,
+    handleMouseEnter,
+    handleMouseLeave,
+    opacity,
+    position,
+  } = useCardSpotlight();
 
   return (
     <Card
@@ -73,7 +81,7 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             className={buttonVariants({ variant: "link", size: "sm" })}
           >
-            Source <ExternalLink size={18} />
+            Source <Icons.extlink size={18} />
           </a>
         )}
         {demo && (
@@ -83,7 +91,7 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             className={buttonVariants({ variant: "link", size: "sm" })}
           >
-            Demo <ExternalLink size={18} />
+            Demo <Icons.extlink size={18} />
           </a>
         )}
       </CardFooter>
