@@ -5,18 +5,8 @@ import Image from "next/image";
 
 export function HeaderSection() {
   return (
-    <header className="text-center sm:text-left sm:my-16 grid grid-cols-4 md:grid-cols-12">
-      <div className=" col-span-full sm:col-span-2 md:col-span-5 order-first sm:order-last max-h-96">
-        <Image
-          className="py-3 object-center sm:object-right-top object-contain w-full h-full"
-          alt=""
-          width={368}
-          height={368}
-          src="/hero-pc.png"
-        />
-      </div>
-
-      <div className="col-span-full sm:col-span-2 md:col-span-7 self-center">
+    <header className="text-center sm:text-left my-16">
+      <div className="max-w-xl">
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
           <span className="text-gradient-flame">Ricardo Chu</span>
         </h1>
@@ -27,8 +17,9 @@ export function HeaderSection() {
 
         <h3 className="mb-3 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
           <Balancer>
-            +2 years of experience in web development, experienced with React, Typescript, Node.js
-            and more. Attention to detail, UX and performance.
+            I have over 2 years of experience in web development, where I have worked extensively
+            with React, Typescript, and Node.js, among other technologies. Attention to detail, UX
+            and performance.
           </Balancer>
         </h3>
 
