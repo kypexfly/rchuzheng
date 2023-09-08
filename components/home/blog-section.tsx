@@ -1,9 +1,9 @@
 import { allPosts } from "contentlayer/generated";
-import { compareDesc, format, parseISO } from "date-fns";
+import { compareDesc } from "date-fns";
 import Link from "next/link";
+import PostCard from "../post-card";
 import { Section } from "../section";
 import { buttonVariants } from "../ui/button";
-import PostCard from "../post-card";
 
 export function BlogSection() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));

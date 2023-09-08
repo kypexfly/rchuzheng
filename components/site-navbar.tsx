@@ -10,10 +10,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
-import { Menu2, X } from "tabler-icons-react";
+import { Icons } from "./icons";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
-import { ScrollArea } from "./ui/scroll-area";
 
 export function Navbar() {
   return (
@@ -39,32 +38,32 @@ function MobileMenu() {
               aria-label="Open navigation menu"
               className="bg-transparent p-1 h-auto"
             >
-              <X
+              <Icons.close
                 className="absolute transition duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:scale-100 scale-0"
                 size={20}
               />
-              <Menu2
+              <Icons.menu
                 className="transition duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:scale-0 scale-100"
                 size={20}
               />
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
-                <nav className="w-full fixed flex flex-col left-0 top-[61px] bg-background h-screen py-16 text-center">
-                  {routes.map((route) => (
-                    <Link
-                      href={route.path}
-                      key={route.path}
-                      className="flex p-2"
-                      legacyBehavior
-                      passHref
-                    >
-                      <NavigationMenuLink className="py-3 px-6 font-bold text-3xl">
-                        {route.name}
-                      </NavigationMenuLink>
-                    </Link>
-                  ))}
-                </nav>
+              <nav className="w-full fixed flex flex-col left-0 top-[61px] bg-background h-screen py-16 text-center">
+                {routes.map((route) => (
+                  <Link
+                    href={route.path}
+                    key={route.path}
+                    className="flex p-2"
+                    legacyBehavior
+                    passHref
+                  >
+                    <NavigationMenuLink className="py-3 px-6 font-bold text-3xl">
+                      {route.name}
+                    </NavigationMenuLink>
+                  </Link>
+                ))}
+              </nav>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>

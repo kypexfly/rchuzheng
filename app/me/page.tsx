@@ -1,11 +1,11 @@
+import { Icons } from "@/components/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/config/site";
 import { socialList } from "@/data";
-import Image from "next/image";
-import { ExternalLink } from "tabler-icons-react";
-import { Metadata } from "next";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `About me | ${siteConfig.title}`,
@@ -197,7 +197,7 @@ function Articles() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Read more <ExternalLink className="ml-1" size={18} />
+              Read more <Icons.extlink className="ml-1" size={18} />
             </a>
           </Button>
         </CardContent>

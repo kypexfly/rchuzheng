@@ -1,4 +1,3 @@
-import PostCard from "@/components/post-card";
 import { TimelineItem, TimelineList } from "@/components/ui/timeline";
 import { siteConfig } from "@/config/site";
 import { allPosts } from "contentlayer/generated";

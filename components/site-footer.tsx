@@ -11,10 +11,6 @@ export function Footer() {
         <p className="text-muted-foreground text-sm">Ricardo Chu • Ecuador • {year}</p>
         <p className="text-muted-foreground text-sm">
           Illustrations by{" "}
-          <a className={linkStyle} href="https://icons8.com/illustrations/author/cj62pzCRUq1N">
-            Julia Buzatti
-          </a>{" "}
-          and{" "}
           <a className={linkStyle} href="https://icons8.com/illustrations/author/wsla8vwyVKgS">
             OlFi
           </a>{" "}

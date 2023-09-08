@@ -28,7 +28,6 @@ export const TimelineItem = ({
   title,
   description,
   href,
-  children,
   className,
   ...props
 }: TimelineItemProps) => {
