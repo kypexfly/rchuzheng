@@ -9,12 +9,12 @@ export function ProjectSection() {
     <Section>
       <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">
         <span>Projects</span>
-        <Link className={buttonVariants({ variant: "outline" })} href="/projects">
+        <Link className={buttonVariants({ variant: "secondary" })} href="/projects">
           View all
         </Link>
       </h2>
 
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projectList
           .filter((p) => p.highlight)
           .slice(0, 6)
