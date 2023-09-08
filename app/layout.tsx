@@ -10,7 +10,7 @@ import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.title}'s Portfolio`,
+  title: siteConfig.title,
   description: siteConfig.description,
 };
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <main className="container py-2 sm:py-6">{children}</main>
+          <main className="container px-4 py-2 sm:px-8 sm:py-6">{children}</main>
           <Footer />
           <Analytics />
         </ThemeProvider>

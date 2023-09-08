@@ -1,4 +1,4 @@
-import PostCard from "@/components/post-card";
+import { TimelineItem, TimelineList } from "@/components/ui/timeline";
 import { siteConfig } from "@/config/site";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
@@ -19,16 +19,18 @@ export default function Blog() {
         </h1>
         <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
           <Balancer>
-            Sharing insights and experiences on various topics like software development, machine learning and
-            engineering.
+            Sharing insights and experiences on various topics like software development, machine
+            learning and engineering.
           </Balancer>
         </p>
       </header>
 
       <div className="grid grid-cols-1 gap-6">
-        {posts.map((post) => (
-          <PostCard key={post.title} {...post} />
-        ))}
+        <TimelineList>
+          {posts.map((post) => (
+            <TimelineItem key={post.title} href={post.url} title={post.title} date={post.date} />
+          ))}
+        </TimelineList>
       </div>
     </section>
   );

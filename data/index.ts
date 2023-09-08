@@ -1,26 +1,26 @@
 import { Project, Social } from "@/types";
-import { BrandGithub, BrandLinkedin, BrandTelegram, Mail } from "tabler-icons-react";
+import { Icons } from "@/components/icons";
 
 export const socialList: Social[] = [
   {
     label: "Github",
     url: "https://github.com/kypexfly",
-    icon: BrandGithub,
+    icon: Icons.github,
   },
   {
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/ricardochuzheng",
-    icon: BrandLinkedin,
+    icon: Icons.linkedin,
   },
   {
     label: "Telegram",
     url: "https://telegram.me/ricardo_chu",
-    icon: BrandTelegram,
+    icon: Icons.telegram,
   },
   {
     label: "Email",
     url: "mailto:rchuzheng@gmail.com",
-    icon: Mail,
+    icon: Icons.mail,
   },
 ];
 
