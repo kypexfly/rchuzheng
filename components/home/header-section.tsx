@@ -15,8 +15,8 @@ export function HeaderSection() {
         />
       </div> */}
 
-      <div className="col-span-full sm:col-span-2 md:col-span-7">
-        <h1 className="text-5xl font-bold tracking-tight">
+      <div className="col-span-full">
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
           <span className="text-gradient-flame">Ricardo Chu</span>
         </h1>
 

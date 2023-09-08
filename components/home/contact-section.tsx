@@ -56,10 +56,10 @@ export function ContactSection() {
       <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">Contact</h2>
 
       <div className="flex flex-col md:flex-row gap-8">
-        <div className="flex-1">
+        <div className="flex-1 text-muted-foreground">
           Got a question or project in mind? Let&apos;s chat! Reach out through the contact form,
           email, or social media. I&apos;m here to help!
-          <ul className="flex gap-3 mt-2">
+          <ul className="flex gap-3 mt-3">
             {socialList.map((s) => (
               <li key={s.label}>
                 <a

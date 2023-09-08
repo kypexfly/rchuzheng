@@ -10,7 +10,7 @@ import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.title}'s Portfolio`,
+  title: siteConfig.title,
   description: siteConfig.description,
 };
 

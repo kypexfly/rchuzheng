@@ -11,7 +11,7 @@ interface PostCardProps extends Post {}
 export default function PostCard({ title, description, date, src, url }: PostCardProps) {
   return (
     <Link href={url}>
-      <Card className="bg-card hover:bg-secondary dark:bg-slate-900/25 border dark:border-slate-800 group p-3 rounded flex flex-row items-start flex-wrap relative overflow-hidden h-full transition-colors hover:transition-colors">
+      <Card className="bg-card dark:hover:bg-secondary hover:bg-secondary dark:bg-slate-900/25 border dark:border-slate-800 group p-3 rounded flex flex-row items-start flex-wrap relative overflow-hidden h-full transition-colors hover:transition-colors">
         <div className="hidden sm:flex w-full sm:h-36 xs:basis-56 overflow-hidden rounded">
           <Image
             className="object-center object-cover w-full h-full"
