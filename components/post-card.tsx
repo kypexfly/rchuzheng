@@ -11,7 +11,7 @@ interface PostCardProps extends Post {}
 export default function PostCard({ title, description, date, src, url }: PostCardProps) {
   return (
     <Link href={url}>
-      <Card className="bg-card dark:hover:bg-secondary hover:bg-secondary dark:bg-slate-900/25 border dark:border-slate-800 group p-3 rounded flex flex-row items-start flex-wrap relative overflow-hidden h-full transition-colors hover:transition-colors">
+      <Card className="bg-card hover:scale-105 dark:bg-slate-900/25 border dark:border-slate-800 group p-3 rounded flex flex-row items-start flex-wrap relative overflow-hidden h-full transition-transform hover:transition-transform">
         <div className="hidden sm:flex w-full sm:h-36 xs:basis-56 overflow-hidden rounded">
           <Image
             className="object-center object-cover w-full h-full"
@@ -23,7 +23,7 @@ export default function PostCard({ title, description, date, src, url }: PostCar
         </div>
 
         <div className="flex-1">
-          <CardHeader className="p-0 sm:px-6">
+          <CardHeader className="px-0 py-2 sm:px-6">
             <time dateTime={date} className="font-mono text-muted-foreground">
               {format(parseISO(date), "LLLL d, yyyy")}
             </time>

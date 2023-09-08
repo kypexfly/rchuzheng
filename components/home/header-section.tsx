@@ -1,18 +1,18 @@
 import { Balancer } from "react-wrap-balancer";
 import { ExternalLink } from "tabler-icons-react";
 import { buttonVariants } from "../ui/button";
+import Image from "next/image";
 
 export function HeaderSection() {
   return (
-    <header className="text-center sm:text-left my-16 grid grid-cols-4 md:grid-cols-12">
+    <header className="text-center sm:text-left sm:my-16 grid grid-cols-4 md:grid-cols-12">
       <div className=" col-span-full sm:col-span-2 md:col-span-5 order-first sm:order-last max-h-96">
-        <img
+        <Image
           className="py-3 object-center sm:object-right-top object-contain w-full h-full"
           alt=""
-          width={300}
-          height={300}
-          // src="https://ouch-cdn2.icons8.com/lTABGk9GHVKDt6RO3YkKE9XxQv9wP558TYsTWVMAzjc/rs:fit:368:330/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNzE2/L2Y1YmJjN2Y5LTY3/NWItNDBjMC05Nzky/LWQyYTZhM2Y3MTI3/Yi5wbmc.png"
-          src="https://ouch-cdn2.icons8.com/bVDAfqOecpe2mEKZvcLz69YiPg72XaP8PCLLsQ5vQM4/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODgw/LzAyZDgzNGEyLTM3/MzgtNDdmMC04N2Mw/LTA2N2Q0YjEyOGM3/YS5wbmc.png"
+          width={368}
+          height={368}
+          src="/hero-pc.png"
         />
       </div>
 
