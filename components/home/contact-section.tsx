@@ -52,7 +52,7 @@ export function ContactSection() {
   };
 
   return (
-    <Section className="pt-8 sm:pt-16 border-t">
+    <Section id="contact" className="pt-8 sm:pt-16 border-t">
       <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">Contact</h2>
 
       <div className="flex flex-col md:flex-row gap-8">

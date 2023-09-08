@@ -15,7 +15,7 @@ export function NavLink({ children, href }: NavLinkProps) {
     <Link
       className={cn(
         "text-muted-foreground px-2 py-2",
-        isCurrentPathOrChild(currentPath, href.toString()) && "text-primary"
+        isCurrentPathOrChild(currentPath, href.toString()) && "text-foreground"
       )}
       href={href}
     >

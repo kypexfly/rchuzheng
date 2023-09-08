@@ -8,38 +8,23 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { socialList } from "@/data";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
 import { ExternalLink, Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
-
-const CV_URL = "https://drive.google.com/file/d/1QUC9P8ZYpSCGvAPiYXM_bRs5Bx5W_LCJ/view?usp=sharing";
+import Image from "next/image";
 
 export function Navbar() {
   return (
-    <header className="bg-slate-100/50 border-b-slate-300/25 dark:bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
+    <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-background/75 dark:bg-background/75 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
       <div className="container flex justify-between items-center">
+        <Link href="/">
+          <Image src="/logo.svg" height={24} width={24} alt="Logo" />
+        </Link>
         <MobileMenu />
         <DesktopMenu />
-        <ul className="flex gap-3 items-center">
-          {socialList.map((s) => (
-            <li key={s.label} className="hover:text-blue-600 text-muted-foreground">
-              <a
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open ${s.label} to a new tab`}
-              >
-                <s.icon size={22} />
-              </a>
-            </li>
-          ))}
-          <li className="hover:text-blue-600 text-muted-foreground">
-            <ThemeToggler />
-          </li>
-        </ul>
+        <ThemeToggler />
       </div>
     </header>
   );
@@ -67,11 +52,6 @@ function MobileMenu() {
                     </Link>
                   </li>
                 ))}
-                <li className="flex p-2">
-                  <a href={CV_URL} className="flex-1" target="_blank" rel="noopener noreferrer">
-                    Resume
-                  </a>
-                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -83,7 +63,7 @@ function MobileMenu() {
 
 function DesktopMenu() {
   return (
-    <div className="hidden sm:flex w-full flex-row justify-between">
+    <div className="hidden sm:flex flex-row justify-between">
       <nav>
         <ul className="flex gap-4 [&_a]:font-bold [&_a]:text-sm">
           {routes.map((route) => (
@@ -91,17 +71,6 @@ function DesktopMenu() {
               <NavLink href={route.path}>{route.name}</NavLink>
             </li>
           ))}
-          <li>
-            <a
-              href={CV_URL}
-              className="text-muted-foreground px-2 py-2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Cv
-              <ExternalLink className="inline-block ml-1" size={18} />{" "}
-            </a>
-          </li>
         </ul>
       </nav>
     </div>
