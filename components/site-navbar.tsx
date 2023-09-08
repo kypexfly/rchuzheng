@@ -8,39 +8,23 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { socialList } from "@/data";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
-import { ExternalLink, Menu2 } from "tabler-icons-react";
+import { Menu2, X } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
-
-const CV_URL = "https://drive.google.com/file/d/1QUC9P8ZYpSCGvAPiYXM_bRs5Bx5W_LCJ/view?usp=sharing";
+import { ScrollArea } from "./ui/scroll-area";
 
 export function Navbar() {
   return (
-    <header className="bg-slate-100/50 border-b-slate-300/25 dark:bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10 border-b dark:border-b-slate-700/25">
+    <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
       <div className="container flex justify-between items-center">
+        <div className="hidden sm:block" />
         <MobileMenu />
         <DesktopMenu />
-        <ul className="flex gap-3 items-center">
-          {socialList.map((s) => (
-            <li key={s.label} className="hover:text-blue-600 text-muted-foreground">
-              <a
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open ${s.label} to a new tab`}
-              >
-                <s.icon size={22} />
-              </a>
-            </li>
-          ))}
-          <li className="hover:text-blue-600 text-muted-foreground">
-            <ThemeToggler />
-          </li>
-        </ul>
+        <ThemeToggler />
       </div>
+      <div />
     </header>
   );
 }
@@ -55,24 +39,32 @@ function MobileMenu() {
               aria-label="Open navigation menu"
               className="bg-transparent p-1 h-auto"
             >
-              <Menu2 size={20} />
+              <X
+                className="absolute transition duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:scale-100 scale-0"
+                size={20}
+              />
+              <Menu2
+                className="transition duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:scale-0 scale-100"
+                size={20}
+              />
             </NavigationMenuTrigger>
 
             <NavigationMenuContent>
-              <ul className="grid grid-cols-1 w-[300px] gap-3 p-2 md:w-[500px] lg:w-[600px] ">
-                {routes.map((route) => (
-                  <li key={route.path} className="flex p-2 border-b">
-                    <Link href={route.path} legacyBehavior passHref>
-                      <NavigationMenuLink className="flex-1">{route.name}</NavigationMenuLink>
+                <nav className="w-full fixed flex flex-col left-0 top-[61px] bg-background h-screen py-16 text-center">
+                  {routes.map((route) => (
+                    <Link
+                      href={route.path}
+                      key={route.path}
+                      className="flex p-2"
+                      legacyBehavior
+                      passHref
+                    >
+                      <NavigationMenuLink className="py-3 px-6 font-bold text-3xl">
+                        {route.name}
+                      </NavigationMenuLink>
                     </Link>
-                  </li>
-                ))}
-                <li className="flex p-2">
-                  <a href={CV_URL} className="flex-1" target="_blank" rel="noopener noreferrer">
-                    Resume
-                  </a>
-                </li>
-              </ul>
+                  ))}
+                </nav>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -83,7 +75,7 @@ function MobileMenu() {
 
 function DesktopMenu() {
   return (
-    <div className="hidden sm:flex w-full flex-row justify-between">
+    <div className="hidden sm:flex flex-row justify-between">
       <nav>
         <ul className="flex gap-4 [&_a]:font-bold [&_a]:text-sm">
           {routes.map((route) => (
@@ -91,17 +83,6 @@ function DesktopMenu() {
               <NavLink href={route.path}>{route.name}</NavLink>
             </li>
           ))}
-          <li>
-            <a
-              href={CV_URL}
-              className="text-muted-foreground px-2 py-2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Cv
-              <ExternalLink className="inline-block ml-1" size={18} />{" "}
-            </a>
-          </li>
         </ul>
       </nav>
     </div>

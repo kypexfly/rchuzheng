@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Post } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import Image from "next/image";
@@ -10,24 +10,30 @@ interface PostCardProps extends Post {}
 
 export default function PostCard({ title, description, date, src, url }: PostCardProps) {
   return (
-    <Card className="flex flex-row items-center flex-wrap relative overflow-hidden py-0 border-0 shadow-none rounded-none">
-      <Link href={url} className="hidden sm:flex w-full sm:h-36 xs:basis-56 overflow-hidden rounded">
-        <Image className="object-center object-cover w-full h-full" src={src} width="250" height="250" alt={title} />
-      </Link>
+    <Link href={url}>
+      <Card className="bg-card hover:scale-105 dark:bg-slate-900/25 border dark:border-slate-800 group p-3 rounded flex flex-row items-start flex-wrap relative overflow-hidden h-full transition-transform hover:transition-transform">
+        <div className="hidden sm:flex w-full sm:h-36 xs:basis-56 overflow-hidden rounded">
+          <Image
+            className="object-center object-cover w-full h-full"
+            src={src}
+            width="250"
+            height="250"
+            alt={title}
+          />
+        </div>
 
-      <div className="flex-1">
-        <CardHeader className="p-0 sm:p-6">
-          <time dateTime={date} className="font-mono">
-            {format(parseISO(date), "LLLL d, yyyy")}
-          </time>
-          <CardTitle className="hover:text-slate-800 text-2xl dark:hover:text-white">
-            <Link href={url}>{title}</Link>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="px-0 sm:pt-0 sm:px-6">
-          <p>{description}</p>
-        </CardContent>
-      </div>
-    </Card>
+        <div className="flex-1">
+          <CardHeader className="px-0 py-2 sm:px-6">
+            <time dateTime={date} className="font-mono text-muted-foreground">
+              {format(parseISO(date), "LLLL d, yyyy")}
+            </time>
+            <CardTitle className="md:text-2xl">{title}</CardTitle>
+          </CardHeader>
+          <CardDescription className="px-0 sm:pt-0 sm:px-6 text-muted-foreground">
+            {description}
+          </CardDescription>
+        </div>
+      </Card>
+    </Link>
   );
 }

@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/config/site";
 import { socialList } from "@/data";
 import Image from "next/image";
 import { ExternalLink } from "tabler-icons-react";
 import { Metadata } from "next";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `About me | ${siteConfig.title}`,
@@ -56,11 +57,11 @@ function Description() {
           <a
             key={s.label}
             href={s.url}
-            className="flex gap-2 link"
+            className={buttonVariants({ variant: "link" })}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <s.icon /> {s.label}{" "}
+            <s.icon className="mr-2" /> {s.label}
           </a>
         ))}
       </p>
@@ -114,7 +115,7 @@ function Skills() {
         I&apos;m also a graphic artist,{" "}
         <a
           href="https://art.ricardochu.com/"
-          className="link"
+          className={cn(buttonVariants({ variant: "link" }), "p-0 text-base underline")}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -134,7 +135,7 @@ function Education() {
       </h2>
       <ol className="relative border-l border-gray-200 dark:border-gray-700">
         <li className="mb-10 ml-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 bg-primary"></div>
           <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             March 2023 - Present
           </time>
@@ -144,7 +145,7 @@ function Education() {
           </p>
         </li>
         <li className="mb-10 ml-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 bg-primary"></div>
           <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             November 2017 - January 2023
           </time>
@@ -156,7 +157,7 @@ function Education() {
           </p>
         </li>
         <li className="ml-4">
-          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-violet-500 dark:bg-violet-700"></div>
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 bg-primary"></div>
           <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
             August 2021 - November 2021
           </time>

@@ -5,8 +5,11 @@ import { allPosts } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
 import "@/styles/mdx.css";
 import { Metadata } from "next";
+import { Balancer } from "react-wrap-balancer";
+import Image from "next/image";
 
-export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
+export const generateStaticParams = async () =>
+  allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
 export const generateMetadata = ({ params }: { params: { slug: string } }): Metadata => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
@@ -23,12 +26,25 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 
   return (
     <article className="py-8 mx-auto w-full max-w-2xl">
-      <div className="mb-8 text-center">
-        <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-          Posted on {format(parseISO(post.date), "LLLL d, yyyy")}
+      <header className="mb-8">
+        <time dateTime={post.date} className="mb-1 text-sm text-muted-foreground">
+          {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-4xl">{post.title}</h1>
-      </div>
+
+        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-3xl">
+          <Balancer>{post.title}</Balancer>
+        </h1>
+
+        <div className="h-72 overflow-hidden rounded my-3 bg-zinc-950">
+          <Image
+            src={post.src}
+            width={700}
+            height={300}
+            alt={post.title}
+            className="object-fit object-center"
+          />
+        </div>
+      </header>
       <Mdx code={post.body.code} />
     </article>
   );
