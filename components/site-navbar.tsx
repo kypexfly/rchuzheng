@@ -10,16 +10,14 @@ import {
 } from "@/components/ui/navigation-menu";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
-import { ExternalLink, Menu2 } from "tabler-icons-react";
+import { Menu2 } from "tabler-icons-react";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
-import Image from "next/image";
+
 
 export function Navbar() {
   return (
-    <header
-      className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-md px-2 py-4 sticky top-0 z-10"
-    >
+    <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
       <div className="container flex justify-between items-center">
         <div className="hidden sm:block"/>
         <MobileMenu />

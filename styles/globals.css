@@ -65,6 +65,7 @@
     @apply content-[''] -z-10 inset-0 absolute pointer-events-none;
     @apply bg-gradient-to-tl from-transparent via-transparent to-blue-500/10;
   }
+
 }
 
 @layer components {
