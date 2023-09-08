@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export function HeaderSection() {
   return (
-    <header className="text-center sm:text-left my-16">
-      <div className="max-w-xl">
+    <header className="text-center my-16">
+      <div className="max-w-xl mx-auto">
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
           <span className="text-gradient-flame">Ricardo Chu</span>
         </h1>
@@ -25,13 +25,13 @@ export function HeaderSection() {
 
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          className="h-8 mx-auto sm:mx-0"
+          className="h-8 mx-auto"
           src="https://skillicons.dev/icons?i=js,ts,react,nextjs,postgres,mongodb,nodejs,tailwind"
           alt="JavaScript, TypeScript, React.js, Next.js, PostgreSQL, MongoDB, Node.js, TailwindCSS"
           title="JavaScript, TypeScript, React.js, Next.js, PostgreSQL, MongoDB, Node.js, TailwindCSS"
         />
 
-        <div className="flex gap-2 justify-center sm:justify-start mt-12">
+        <div className="flex gap-2 justify-center mt-12">
           <a href="#contact" className={buttonVariants({ variant: "secondary" })}>
             Contact me
           </a>
