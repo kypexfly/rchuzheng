@@ -1,8 +1,12 @@
+"use client";
+
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import PostCard from "../post-card";
 import { Section } from "../section";
+import { StaggerAnimateInView, cardAnimate } from "../stagger-animate";
 import { buttonVariants } from "../ui/button";
 
 export function BlogSection() {
@@ -17,11 +21,13 @@ export function BlogSection() {
         </Link>
       </h2>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <StaggerAnimateInView className="grid gap-6 lg:grid-cols-2">
         {posts.slice(0, 7).map((post) => (
-          <PostCard key={post.title} {...post} />
+          <motion.div key={post.title} variants={cardAnimate}>
+            <PostCard {...post} />
+          </motion.div>
         ))}
-      </div>
+      </StaggerAnimateInView>
     </Section>
   );
 }
