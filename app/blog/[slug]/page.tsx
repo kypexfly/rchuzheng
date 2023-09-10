@@ -41,7 +41,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
             width={700}
             height={300}
             alt={post.title}
-            className="object-fit object-center"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       </header>
