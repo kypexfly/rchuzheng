@@ -70,69 +70,40 @@ export function ContactSection() {
               alt=""
             />
           </div>
-          <div className="flex gap-3 mt-3 [&>a]:flex-1">
-            {socialList.map((s) => (
-              <a
-                key={s.label}
-                href={s.url}
-                target="_blank"
-                className={buttonVariants({ variant: "secondary" })}
-                rel="noopener noreferrer"
-                aria-label={`Open ${s.label} to a new tab`}
-              >
-                <s.icon size={22} />
-              </a>
-            ))}
-          </div>
         </div>
 
         <form onSubmit={handleOnSubmit} className="space-y-4 max-w-2xl flex-auto">
-          <div>
-            <Label htmlFor="name" className="mb-3">
-              Name
-            </Label>
-            <Input
-              className="mt-2"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              value={form.name}
-              onChange={handleOnChange}
-              required
-            />
-          </div>
+          <Input
+            className="mt-2"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            value={form.name}
+            onChange={handleOnChange}
+            required
+          />
 
-          <div>
-            <Label htmlFor="email" className="mb-3">
-              Email
-            </Label>
-            <Input
-              className="mt-2"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              value={form.email}
-              onChange={handleOnChange}
-              required
-            />
-          </div>
+          <Input
+            className="mt-2"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            value={form.email}
+            onChange={handleOnChange}
+            required
+          />
 
-          <div>
-            <Label htmlFor="message" className="mb-3">
-              Message
-            </Label>
-            <Textarea
-              className="mt-2"
-              name="message"
-              rows={8}
-              placeholder="Enter your message"
-              value={form.message}
-              onChange={handleOnChange}
-              required
-            />
-          </div>
+          <Textarea
+            className="mt-2"
+            name="message"
+            rows={8}
+            placeholder="Enter your message"
+            value={form.message}
+            onChange={handleOnChange}
+            required
+          />
 
           <Button disabled={sending} className="w-full">
             {sending ? "Sending..." : "Send"}
