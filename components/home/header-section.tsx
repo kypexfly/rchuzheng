@@ -7,6 +7,7 @@ import { buttonVariants } from "../ui/button";
 import { motion } from "framer-motion";
 import { socialList } from "@/data";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function HeaderSection() {
   return (

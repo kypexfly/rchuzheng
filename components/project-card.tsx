@@ -43,7 +43,7 @@ export default function ProjectCard({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col relative overflow-hidden rounded-lg border dark:border-slate-800 dark:bg-slate-900/25 pb-3 shadow-lg h-full"
+      className="flex flex-col relative overflow-hidden rounded-lg border dark:border-slate-800 dark:bg-slate-900/25 shadow-lg h-full"
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
@@ -57,7 +57,7 @@ export default function ProjectCard({
           <Image fill className="object-cover" alt={`${title} image preview`} src={cover!} />
         </AspectRatio>
       )}
-      <CardHeader>
+      <CardHeader className="pb-2">
         <CardTitle className="mb-2">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
         <ul className="flex gap-2 flex-wrap text-[0.75rem] w-full">
@@ -68,7 +68,7 @@ export default function ProjectCard({
           ))}
         </ul>
       </CardHeader>
-      <CardFooter className="mt-auto flex gap-6 flex-wrap [&_.icon]:ml-1 [&>a]:px-0 pb-0">
+      <CardFooter className="mt-auto flex gap-6 flex-wrap [&_.icon]:ml-1 [&>a]:px-0 py-2">
         {article && (
           <Link href={article} className={buttonVariants({ variant: "link", size: "sm" })}>
             Article

@@ -26,7 +26,7 @@ export const socialList: Social[] = [
 
 export const projectList: Project[] = [
   {
-    title: "Dev.to Clone",
+    title: "Blog Platform for Developers",
     description:
       "Fullstack app clone of Dev.to. Create posts, comment, share your profile and more.",
     date: "2023",
@@ -48,8 +48,8 @@ export const projectList: Project[] = [
     highlight: true,
   },
   {
-    title: "CryptoView",
-    description: "Explore news, manage, and gain insightful analysis on cryptocurrencies.",
+    title: "Cryptocurrency Manager",
+    description: "CryptoView let you explore news, manage, and gain insightful analysis on cryptocurrencies.",
     date: "2023",
     source: "https://github.com/kypexfly/cryptoview",
     demo: "https://cryptoview-plus.netlify.app",
@@ -58,8 +58,8 @@ export const projectList: Project[] = [
     highlight: true,
   },
   {
-    title: "Cybertech Ecommerce",
-    description: "Fullstack ecommerce app with React/Next and Stripe payment.",
+    title: "E-commerce Store",
+    description: "Fullstack tech e-commerce app with React/Next and Stripe payment.",
     date: "2023",
     source: "https://github.com/kypexfly/cybertech-ecommerce",
     demo: "https://cybertech-ecommerce.vercel.app",
