@@ -75,7 +75,7 @@ export function HeaderSection() {
                 </a>
               </li>
             ))}
-            <li className="w-[1px] h-full bg-muted-foreground"></li>
+            <div className="w-[1px] h-full bg-gradient-to-t from-transparent to-muted-foreground" />
           </motion.ul>
         </div>
       </StaggerAnimateInView>

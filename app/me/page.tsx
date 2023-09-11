@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <>
+    <div className="container">
       <Description />
       <Skills />
       <Education />
       <Articles />
-    </>
+    </div>
   );
 }
 
@@ -30,8 +30,8 @@ function Description() {
           src="/me.png"
           alt="Ricardo Chu photo"
           className="rounded-full block mx-auto mb-3 xs:inline xs:mr-3"
-          width="80"
-          height="80"
+          width="96"
+          height="96"
         />
         <span className="text-gradient-flame">About</span> Me
       </h1>
@@ -53,17 +53,22 @@ function Description() {
 
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
         You can contact me in any of the following ways: <br />
-        {socialList.map((s) => (
-          <a
-            key={s.label}
-            href={s.url}
-            className={buttonVariants({ variant: "link" })}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <s.icon className="mr-2" /> {s.label}
-          </a>
-        ))}
+        <span className="group">
+          {socialList.map((s) => (
+            <a
+              key={s.label}
+              href={s.url}
+              className={cn(
+                buttonVariants({ variant: "link" }),
+                "group-hover:opacity-50 hover:!opacity-100 transition-opacity"
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <s.icon className="mr-2" /> {s.label}
+            </a>
+          ))}
+        </span>
       </p>
     </section>
   );
