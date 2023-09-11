@@ -18,8 +18,8 @@ export default function Projects() {
           </h1>
           <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
             <Balancer>
-              Projects to showcase my experience in web development, utilizing frameworks and best practices to
-              deliver scalable and responsive solutions.
+              Projects to showcase my experience in web development, utilizing frameworks and best
+              practices to deliver scalable and responsive solutions.
             </Balancer>
           </p>
         </header>

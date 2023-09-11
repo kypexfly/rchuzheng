@@ -17,7 +17,7 @@ import { ThemeToggler } from "./theme-toggle";
 export function Navbar() {
   return (
     <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
-      <div className="container flex justify-between items-center px-2">
+      <div className="container flex justify-between items-center px-2 sm:px-8">
         <div className="hidden sm:block" />
         <MobileMenu />
         <DesktopMenu />

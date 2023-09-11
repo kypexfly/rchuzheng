@@ -3,7 +3,7 @@
 import { HTMLMotionProps, motion } from "framer-motion";
 import React from "react";
 
-export const cardAnimate = {
+export const fadeInLeft = {
   offscreen: {
     opacity: 0,
     translateX: -50,
@@ -17,16 +17,53 @@ export const cardAnimate = {
   },
 };
 
-interface StaggerAnimateInViewProps extends React.HTMLAttributes<HTMLElement> {}
+export const fadeInRight = {
+  offscreen: {
+    opacity: 0,
+    translateX: 50,
+  },
+  onscreen: {
+    opacity: 1,
+    translateX: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
 
-export const StaggerAnimateInView = ({ children, className }: StaggerAnimateInViewProps) => {
+export const fadeInTop = {
+  offscreen: {
+    opacity: 0,
+    translateY: -50,
+  },
+  onscreen: {
+    opacity: 1,
+    translateY: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
+interface StaggerAnimateInViewProps extends HTMLMotionProps<"div"> {}
+
+export const StaggerAnimateInView = ({
+  initial,
+  whileInView,
+  viewport,
+  transition,
+  children,
+  className,
+  ...props
+}: StaggerAnimateInViewProps) => {
   return (
     <motion.div
       className={className}
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ staggerChildren: 0.1, type: "just" }}
+      initial={initial || "offscreen"}
+      whileInView={whileInView || "onscreen"}
+      viewport={viewport || { once: true, amount: 0.3 }}
+      transition={transition || { staggerChildren: 0.15, type: "just" }}
+      {...props}
     >
       {children}
     </motion.div>

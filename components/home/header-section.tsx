@@ -1,20 +1,29 @@
+"use client";
+
 import { Balancer } from "react-wrap-balancer";
-import { buttonVariants } from "../ui/button";
 import { Icons } from "../icons";
+import { StaggerAnimateInView, fadeInLeft, fadeInRight } from "../stagger-animate";
+import { buttonVariants } from "../ui/button";
+import { motion } from "framer-motion";
+import { socialList } from "@/data";
+import { cn } from "@/lib/utils";
 
 export function HeaderSection() {
   return (
-    <header className="text-center my-16">
-      <div className="max-w-xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
+    <header className="text-center my-16 relative">
+      <StaggerAnimateInView className="max-w-2xl mx-auto" viewport={{ amount: 0.5 }}>
+        <motion.h1 variants={fadeInLeft} className="text-5xl sm:text-6xl font-bold tracking-tight">
           <span className="text-gradient-flame">Ricardo Chu</span>
-        </h1>
+        </motion.h1>
 
-        <h2 className="block mb-3 leading-relaxed text-2xl font-bold text-gray-800 dark:text-white">
+        <motion.h2
+          variants={fadeInLeft}
+          className="block mb-3 leading-relaxed text-2xl font-bold text-gray-800 dark:text-white"
+        >
           FullStack Developer
-        </h2>
+        </motion.h2>
 
-        <h3 className="mb-3 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
+        <h3 className="mb-3 md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
           <Balancer>
             I have over 2 years of experience in web development, where I have worked extensively
             with React, Typescript, and Node.js, among other technologies. Attention to detail, UX
@@ -31,7 +40,10 @@ export function HeaderSection() {
         />
 
         <div className="flex gap-2 justify-center mt-12">
-          <a href="#contact" className={buttonVariants({ variant: "secondary" })}>
+          <a
+            href="#contact"
+            className={cn(buttonVariants({ variant: "secondary" }), "flex md:hidden")}
+          >
             Contact me
           </a>
 
@@ -45,7 +57,27 @@ export function HeaderSection() {
             <Icons.extlink className="ml-2" width={18} height={18} />
           </a>
         </div>
-      </div>
+
+        <motion.ul
+          variants={fadeInRight}
+          className="hidden absolute top-0 right-0 space-y-3 h-full md:flex flex-col items-center"
+        >
+          {socialList.map((s) => (
+            <li key={s.label} className="hover:text-purple-500 text-muted-foreground">
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${s.label} to a new tab`}
+                className="p-2 block"
+              >
+                <s.icon size={22} />
+              </a>
+            </li>
+          ))}
+          <li className="w-[1px] h-full bg-muted-foreground"></li>
+        </motion.ul>
+      </StaggerAnimateInView>
     </header>
   );
 }

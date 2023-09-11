@@ -1,14 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Section } from "../section";
-import { Button, buttonVariants } from "../ui/button";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
-import { Textarea } from "../ui/textarea";
-import { socialList } from "@/data";
 import { ContactFormSchema } from "@/lib/validators";
 import Image from "next/image";
+import { useState } from "react";
+import { Section } from "../section";
+import { StaggerAnimateInView, fadeInRight } from "../stagger-animate";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 
 const initialFormState = {
   name: "",
@@ -54,63 +53,65 @@ export function ContactSection() {
 
   return (
     <Section id="contact" className="pt-8 sm:pt-16">
-      <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">Contact</h2>
+      <StaggerAnimateInView variants={fadeInRight} viewport={{ once: false }}>
+        <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">Contact</h2>
 
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="flex-1 text-muted-foreground">
-          Got a question or project in mind? Let&apos;s chat! Reach out through the contact form,
-          email, or social media. I&apos;m here to help!
-          <div className="h-80 relative">
-            <div className="absolute bg-green-500/20 w-full h-full rounded-full -z-10 blur-3xl motion-reduce:animate-none animate-pulse" />
-            <Image
-              className="object-center object-contain w-full h-full"
-              width={400}
-              height={400}
-              src="/contact-vr.png"
-              alt=""
-            />
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex-1 text-muted-foreground">
+            Got a question or project in mind? Let&apos;s chat! Reach out through the contact form,
+            email, or social media. I&apos;m here to help!
+            <div className="h-80 relative">
+              <div className="absolute bg-green-500/20 w-full h-full rounded-full -z-10 blur-3xl motion-reduce:animate-none animate-pulse" />
+              <Image
+                className="object-center object-contain w-full h-full"
+                width={400}
+                height={400}
+                src="/contact-vr.png"
+                alt=""
+              />
+            </div>
           </div>
+
+          <form onSubmit={handleOnSubmit} className="space-y-4 max-w-2xl flex-auto">
+            <Input
+              className="mt-2"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              value={form.name}
+              onChange={handleOnChange}
+              required
+            />
+
+            <Input
+              className="mt-2"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              value={form.email}
+              onChange={handleOnChange}
+              required
+            />
+
+            <Textarea
+              className="mt-2"
+              name="message"
+              rows={8}
+              placeholder="Enter your message"
+              value={form.message}
+              onChange={handleOnChange}
+              required
+            />
+
+            <Button disabled={sending} className="w-full">
+              {sending ? "Sending..." : "Send"}
+            </Button>
+            {isError && <p className="text-red-500">Something went wrong. Try again later.</p>}
+          </form>
         </div>
-
-        <form onSubmit={handleOnSubmit} className="space-y-4 max-w-2xl flex-auto">
-          <Input
-            className="mt-2"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            value={form.name}
-            onChange={handleOnChange}
-            required
-          />
-
-          <Input
-            className="mt-2"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            value={form.email}
-            onChange={handleOnChange}
-            required
-          />
-
-          <Textarea
-            className="mt-2"
-            name="message"
-            rows={8}
-            placeholder="Enter your message"
-            value={form.message}
-            onChange={handleOnChange}
-            required
-          />
-
-          <Button disabled={sending} className="w-full">
-            {sending ? "Sending..." : "Send"}
-          </Button>
-          {isError && <p className="text-red-500">Something went wrong. Try again later.</p>}
-        </form>
-      </div>
+      </StaggerAnimateInView>
     </Section>
   );
 }
