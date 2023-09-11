@@ -16,8 +16,8 @@ import { ThemeToggler } from "./theme-toggle";
 
 export function Navbar() {
   return (
-    <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md px-2 py-4 sticky top-0 z-10">
-      <div className="container flex justify-between items-center px-2 sm:px-8">
+    <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md sticky top-0 z-10">
+      <div className="container flex justify-between items-center py-4 sm:py-2 sm:px-2">
         <div className="hidden sm:block" />
         <MobileMenu />
         <DesktopMenu />
@@ -58,7 +58,7 @@ function MobileMenu() {
                     legacyBehavior
                     passHref
                   >
-                    <NavigationMenuLink className="py-3 px-6 font-bold text-3xl">
+                    <NavigationMenuLink className="p-5 font-bold text-3xl">
                       {route.name}
                     </NavigationMenuLink>
                   </Link>
@@ -75,8 +75,8 @@ function MobileMenu() {
 function DesktopMenu() {
   return (
     <div className="hidden sm:flex flex-row justify-between">
-      <nav>
-        <ul className="flex gap-4 [&_a]:font-bold [&_a]:text-sm">
+      <nav className="border border-border/50 rounded-xl px-4 py-2 bg-background/50">
+        <ul className="flex gap-6 [&_a]:font-bold [&_a]:text-sm">
           {routes.map((route) => (
             <li key={route.path}>
               <NavLink href={route.path}>{route.name}</NavLink>

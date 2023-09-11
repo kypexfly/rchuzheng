@@ -10,7 +10,7 @@ export function BlogSection() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
-    <Section>
+    <Section className="container">
       <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">
         <span>Latest Posts</span>
         <Link className={buttonVariants({ variant: "secondary" })} href="/blog">

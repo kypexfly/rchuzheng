@@ -12,7 +12,7 @@ export default function Blog() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
-    <section className="my-16">
+    <section className="container sm:py-6 sm:px-8 my-16">
       <header className="text-center sm:text-left my-8">
         <h1 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
           <span className="text-gradient-flame">Blog</span> Posts
@@ -25,10 +25,17 @@ export default function Blog() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 gap-6">
-        <TimelineList>
+      <div className="grid grid-cols-1 gap-6 pl-4">
+        <TimelineList className="group">
           {posts.map((post) => (
-            <TimelineItem key={post.title} href={post.url} title={post.title} date={post.date} />
+            <TimelineItem
+              className="group-hover:opacity-50 hover:!opacity-100 transition-opacity"
+              key={post.title}
+              href={post.url}
+              title={post.title}
+              date={post.date}
+              description={post.description}
+            />
           ))}
         </TimelineList>
       </div>

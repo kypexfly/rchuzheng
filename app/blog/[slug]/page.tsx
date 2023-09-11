@@ -7,6 +7,8 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { Balancer } from "react-wrap-balancer";
 import Image from "next/image";
+import ButtonBack from "./button-back";
+import { siteConfig } from "@/config/site";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -25,28 +27,35 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) return notFound();
 
   return (
-    <article className="py-8 mx-auto w-full max-w-2xl">
-      <header className="mb-8">
-        <time dateTime={post.date} className="mb-1 text-sm text-muted-foreground">
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
+    <>
+      <div className="container sm:px-8 my-3">
+        <ButtonBack  />
+      </div>
 
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-3xl">
-          <Balancer>{post.title}</Balancer>
-        </h1>
+      <article className="px-4 pb-6 sm:py-6 w-full mx-auto max-w-2xl">
+        <header className="mb-8">
+          <h1 className="scroll-m-20 text-5xl font-base tracking-tight">
+            <Balancer>{post.title}</Balancer>
+          </h1>
 
-        <div className="h-72 overflow-hidden rounded my-3 bg-zinc-950">
-          <Image
-            src={post.src}
-            width={700}
-            height={300}
-            alt={post.title}
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
-      </header>
-      <Mdx code={post.body.code} />
-    </article>
+          <p className="my-2 text-sm text-muted-foreground">
+            <time dateTime={post.date}>{format(parseISO(post.date), "LLLL d, yyyy")}</time> •{" "}
+            {siteConfig.title}
+          </p>
+
+          <div className="h-72 overflow-hidden my-3 bg-zinc-950">
+            <Image
+              src={post.src}
+              width={700}
+              height={300}
+              alt={post.title}
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        </header>
+        <Mdx code={post.body.code} />
+      </article>
+    </>
   );
 };
 
