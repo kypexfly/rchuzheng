@@ -7,7 +7,7 @@ import { buttonVariants } from "../ui/button";
 
 export function ProjectSection() {
   return (
-    <Section>
+    <Section className="container">
       <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">
         <span>Projects</span>
         <Link className={buttonVariants({ variant: "secondary" })} href="/projects">
@@ -20,7 +20,7 @@ export function ProjectSection() {
           .filter((p) => p.highlight)
           .slice(0, 6)
           .map((project) => (
-            <StaggerAnimateInView key={project.title} variants={fadeInLeft} className="h-full flex">
+            <StaggerAnimateInView key={project.title} variants={fadeInLeft}>
               <ProjectCard showCover {...project} />
             </StaggerAnimateInView>
           ))}

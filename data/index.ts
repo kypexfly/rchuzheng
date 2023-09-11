@@ -37,12 +37,12 @@ export const projectList: Project[] = [
     highlight: true,
   },
   {
-    title: "AI Playground (Work In Progress)",
+    title: "AI Playground (Coming soon)",
     description:
       "Explore amazing apps powered by Artificial Intelligence and Large Language Models.",
     date: "2023",
     source: "https://github.com/kypexfly/ai-playground",
-    demo: "https://ai.ricardochu.com",
+    // demo: "https://ai.ricardochu.com",
     tech: ["next", "typescript", "langchain", "ai"],
     cover: "/img/cover-ai-playground.jpg",
     highlight: true,

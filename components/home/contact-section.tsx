@@ -4,7 +4,7 @@ import { ContactFormSchema } from "@/lib/validators";
 import Image from "next/image";
 import { useState } from "react";
 import { Section } from "../section";
-import { StaggerAnimateInView, fadeInRight } from "../stagger-animate";
+import { StaggerAnimateInView, fadeInTop } from "../stagger-animate";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
@@ -52,8 +52,12 @@ export function ContactSection() {
   };
 
   return (
-    <Section id="contact" className="pt-8 sm:pt-16">
-      <StaggerAnimateInView variants={fadeInRight} viewport={{ once: false }}>
+    <Section id="contact" className="bg-secondary/25 border-t border-t-border/50 my-0">
+      <StaggerAnimateInView
+        variants={fadeInTop}
+        viewport={{ once: false }}
+        className="container px-2 sm:px-8"
+      >
         <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">Contact</h2>
 
         <div className="flex flex-col md:flex-row gap-8">

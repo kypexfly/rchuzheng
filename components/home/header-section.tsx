@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils";
 
 export function HeaderSection() {
   return (
-    <header className="text-center my-16 relative">
-      <StaggerAnimateInView className="max-w-2xl mx-auto" viewport={{ amount: 0.5 }}>
+    <header className="text-center mt-16 relative overflow-x-hidden container px-2 py-4 sm:py-8 sm:px-8">
+      <StaggerAnimateInView className="max-w-2xl mx-auto container" viewport={{ amount: 0.5 }}>
         <motion.h1 variants={fadeInLeft} className="text-5xl sm:text-6xl font-bold tracking-tight">
           <span className="text-gradient-flame">Ricardo Chu</span>
         </motion.h1>
@@ -56,27 +56,27 @@ export function HeaderSection() {
             Resume
             <Icons.extlink className="ml-2" width={18} height={18} />
           </a>
-        </div>
 
-        <motion.ul
-          variants={fadeInRight}
-          className="hidden absolute top-0 right-0 space-y-3 h-full md:flex flex-col items-center"
-        >
-          {socialList.map((s) => (
-            <li key={s.label} className="hover:text-purple-500 text-muted-foreground">
-              <a
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Open ${s.label} to a new tab`}
-                className="p-2 block"
-              >
-                <s.icon size={22} />
-              </a>
-            </li>
-          ))}
-          <li className="w-[1px] h-full bg-muted-foreground"></li>
-        </motion.ul>
+          <motion.ul
+            variants={fadeInRight}
+            className="hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center"
+          >
+            {socialList.map((s) => (
+              <li key={s.label} className="hover:text-violet-500 text-muted-foreground">
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${s.label} to a new tab`}
+                  className="p-2 block"
+                >
+                  <s.icon size={22} />
+                </a>
+              </li>
+            ))}
+            <li className="w-[1px] h-full bg-muted-foreground"></li>
+          </motion.ul>
+        </div>
       </StaggerAnimateInView>
     </header>
   );

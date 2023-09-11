@@ -11,7 +11,7 @@ export function ThemeToggler() {
   const toggleTheme = () => (currentTheme === "dark" ? setTheme("light") : setTheme("dark"));
 
   return (
-    <button aria-label="Toggle theme" onClick={toggleTheme} className="flex justify-center">
+    <button aria-label="Toggle theme" onClick={toggleTheme} className="flex justify-center px-2 text-muted-foreground">
       <Icons.sun
         className="rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
         size={22}

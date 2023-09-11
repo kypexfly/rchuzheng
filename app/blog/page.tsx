@@ -12,7 +12,7 @@ export default function Blog() {
   const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
-    <section className="my-16">
+    <section className="container my-16">
       <header className="text-center sm:text-left my-8">
         <h1 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
           <span className="text-gradient-flame">Blog</span> Posts
