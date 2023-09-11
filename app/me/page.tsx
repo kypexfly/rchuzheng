@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="container">
+    <div className="container sm:py-6 sm:px-8">
       <Description />
       <Skills />
       <Education />

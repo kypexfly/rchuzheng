@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export function HeaderSection() {
   return (
-    <header className="text-center mt-16 relative overflow-x-hidden container px-2 py-4 sm:py-8 sm:px-8">
+    <header className="text-center mt-16 relative overflow-x-hidden container py-4 sm:py-8 sm:px-8">
       <StaggerAnimateInView className="max-w-2xl mx-auto container" viewport={{ amount: 0.5 }}>
         <motion.h1 variants={fadeInLeft} className="text-5xl sm:text-6xl font-bold tracking-tight">
           <span className="text-gradient-flame">Ricardo Chu</span>

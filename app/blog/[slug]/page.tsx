@@ -28,13 +28,13 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <div className="container px-2 sm:px-8 my-3">
-        <ButtonBack />
+      <div className="container sm:px-8 my-3">
+        <ButtonBack  />
       </div>
 
-      <article className="px-2 sm:px-8 py-8 mx-auto w-full max-w-2xl">
+      <article className="px-4 pb-6 sm:py-6 w-full mx-auto max-w-2xl">
         <header className="mb-8">
-          <h1 className="scroll-m-20 text-6xl font-base tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-5xl font-base tracking-tight">
             <Balancer>{post.title}</Balancer>
           </h1>
 
