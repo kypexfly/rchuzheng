@@ -34,7 +34,9 @@ export function HeaderSection() {
 
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          className="h-8 mx-auto"
+          className="mx-auto"
+          width={375}
+          height={40}
           src="https://skillicons.dev/icons?i=js,ts,react,nextjs,postgres,mongodb,nodejs,tailwind"
           alt="JavaScript, TypeScript, React.js, Next.js, PostgreSQL, MongoDB, Node.js, TailwindCSS"
           title="JavaScript, TypeScript, React.js, Next.js, PostgreSQL, MongoDB, Node.js, TailwindCSS"

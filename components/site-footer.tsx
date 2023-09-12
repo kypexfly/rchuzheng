@@ -3,7 +3,6 @@ import { buttonVariants } from "./ui/button";
 import { socialList } from "@/data";
 
 export function Footer() {
-  const year = new Date().getFullYear();
   const linkStyle = cn(buttonVariants({ variant: "link" }), "p-0 h-auto");
 
   return (
@@ -27,7 +26,7 @@ export function Footer() {
             <li className="w-[1px] h-full bg-muted-foreground"></li>
           </ul>
         </div>
-        <p className="text-muted-foreground text-sm">Ricardo Chu • Ecuador • {year}</p>
+        <p className="text-muted-foreground text-sm">Ricardo Chu • Ecuador • 2023</p>
         <p className="text-muted-foreground text-sm">
           Illustrations by{" "}
           <a className={linkStyle} href="https://icons8.com/illustrations/author/wsla8vwyVKgS">

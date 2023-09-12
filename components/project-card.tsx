@@ -11,6 +11,7 @@ import { buttonVariants } from "./ui/button";
 
 interface ProjectCardProps extends Project {
   showCover?: boolean;
+  index?: number;
 }
 
 export default function ProjectCard({
@@ -23,6 +24,7 @@ export default function ProjectCard({
   demo,
   source,
   tech,
+  index,
 }: ProjectCardProps) {
   const {
     divRef,
@@ -54,7 +56,15 @@ export default function ProjectCard({
       />
       {showCover && (
         <AspectRatio ratio={1800 / 900}>
-          <Image fill className="object-cover" alt={`${title} image preview`} src={cover!} />
+          <Image
+            fill
+            className="object-cover"
+            alt={`${title} image preview`}
+            src={cover!}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={100}
+            priority={index === 0} // only show the first card as priority
+          />
         </AspectRatio>
       )}
       <CardHeader className="pb-2">

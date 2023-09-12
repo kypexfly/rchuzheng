@@ -19,9 +19,9 @@ export function ProjectSection() {
         {projectList
           .filter((p) => p.highlight)
           .slice(0, 6)
-          .map((project) => (
+          .map((project, i) => (
             <StaggerAnimateInView key={project.title} variants={fadeInLeft} viewport={{once: true, amount: 0.1}}>
-              <ProjectCard showCover {...project} />
+              <ProjectCard showCover {...project} index={i} />
             </StaggerAnimateInView>
           ))}
       </div>
