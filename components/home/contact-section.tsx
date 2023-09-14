@@ -63,7 +63,7 @@ export function ContactSection() {
           <div className="flex-1 text-muted-foreground">
             Got a question or project in mind? Let&apos;s chat! Reach out through the contact form,
             email, or social media. I&apos;m here to help!
-            <div className="h-80 relative">
+            <div className="hidden xs:block h-80 relative">
               <div className="absolute bg-green-500/25 scale-75 w-full h-full rounded-full -z-10 blur-3xl motion-reduce:animate-none animate-pulse" />
               <Image
                 className="object-center object-contain w-full h-full"

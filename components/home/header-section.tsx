@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
+
 import { Balancer } from "react-wrap-balancer";
 import { Icons } from "../icons";
 import { StaggerAnimateInView, fadeInLeft, fadeInRight } from "../stagger-animate";
@@ -7,6 +9,7 @@ import { buttonVariants } from "../ui/button";
 import { motion } from "framer-motion";
 import { socialList } from "@/data";
 import { cn } from "@/lib/utils";
+import Marquee from "react-fast-marquee";
 
 export function HeaderSection() {
   return (
@@ -23,35 +26,22 @@ export function HeaderSection() {
           FullStack Developer
         </motion.h2>
 
-        <h3 className="mb-3 md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed">
           <Balancer>
             I have over 2 years of experience in web development, where I have worked extensively
             with React, Typescript, and Node.js, among other technologies. Attention to detail, UX
             and performance.
           </Balancer>
-        </h3>
+        </p>
 
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="mx-auto"
-          width={375}
-          height={40}
-          src="https://skillicons.dev/icons?i=js,ts,react,nextjs,postgres,mongodb,nodejs,tailwind"
-          alt="JavaScript, TypeScript, React.js, Next.js, PostgreSQL, MongoDB, Node.js, TailwindCSS"
-          title="JavaScript, TypeScript, React.js, Next.js, PostgreSQL, MongoDB, Node.js, TailwindCSS"
-        />
-
-        <div className="flex gap-2 justify-center mt-12">
-          <a
-            href="#contact"
-            className={cn(buttonVariants({ variant: "secondary" }), "flex md:hidden")}
-          >
+        <div className="flex gap-2 justify-center mt-4">
+          <a href="#contact" className={cn(buttonVariants({ variant: "secondary" }))}>
             Contact me
           </a>
 
           <a
             href="https://drive.google.com/file/d/1QUC9P8ZYpSCGvAPiYXM_bRs5Bx5W_LCJ/view?usp=sharing"
-            className={buttonVariants()}
+            className={buttonVariants({ variant: "link" })}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -64,7 +54,7 @@ export function HeaderSection() {
             className="hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center"
           >
             {socialList.map((s) => (
-              <li key={s.label} className="hover:text-violet-500 text-muted-foreground">
+              <li key={s.label} className="hover:text-foreground hover:scale-125 transition-all ease-in-out text-muted-foreground">
                 <a
                   href={s.url}
                   target="_blank"
@@ -79,6 +69,20 @@ export function HeaderSection() {
             <div className="w-[1px] h-full bg-gradient-to-t from-transparent to-muted-foreground" />
           </motion.ul>
         </div>
+
+        <Marquee className="mt-9" gradient speed={50} autoFill>
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=ts" alt="TypeScript" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=react" alt="React.js" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=js" alt="JavaScript" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=mongo" alt="MongoDB" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=tailwind" alt="TailwindCSS" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=prisma" alt="PrismaORM" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=redux" alt="RTK" />
+          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=graphql" alt="GraphQL" />
+        </Marquee>
       </StaggerAnimateInView>
     </header>
   );
