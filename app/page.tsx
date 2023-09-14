@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <HeaderSection />
       <ProjectSection />
-      {/* <BlogSection /> */}
+      <BlogSection />
       <ContactSection />
     </>
   );
