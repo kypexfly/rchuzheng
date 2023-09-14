@@ -13,10 +13,36 @@ import Link from "next/link";
 import { Icons } from "./icons";
 import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 
 export function Navbar() {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 100) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <header className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md sticky top-0 z-10">
+    <motion.header
+      className="border-b-slate-300/20 border-b dark:border-b-slate-700/20 bg-slate-100/30 dark:bg-slate-900/30 backdrop-blur-md sticky top-0 z-10"
+      variants={{
+        visible: {
+          y: 0,
+        },
+        hidden: {
+          y: "-100%",
+        },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+    >
       <div className="container flex justify-between items-center py-4 sm:py-2 sm:px-2">
         <div className="hidden sm:block" />
         <MobileMenu />
@@ -24,7 +50,7 @@ export function Navbar() {
         <ThemeToggler />
       </div>
       <div />
-    </header>
+    </motion.header>
   );
 }
 
