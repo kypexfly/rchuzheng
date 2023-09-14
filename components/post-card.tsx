@@ -24,7 +24,7 @@ export default function PostCard({ title, description, date, src, url }: PostCar
 
         <div className="flex-1">
           <CardHeader className="px-0 py-2 sm:px-6">
-            <time dateTime={date} className="font-mono text-sm text-muted-foreground">
+            <time dateTime={date} className="font-mono text-sm text-muted-foreground" suppressHydrationWarning>
               {format(parseISO(date), "LLLL d, yyyy")}
             </time>
             <CardTitle className="md:text-2xl">{title}</CardTitle>
