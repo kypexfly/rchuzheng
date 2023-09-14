@@ -55,7 +55,6 @@ export function ContactSection() {
     <Section id="contact" className="bg-secondary/25 border-t border-t-border/50 my-0">
       <StaggerAnimateInView
         variants={fadeInTop}
-        viewport={{ once: false }}
         className="container px-2 sm:px-8"
       >
         <h2 className="mb-6 leading-relaxed text-2xl font-bold flex justify-between">Contact</h2>
@@ -65,7 +64,7 @@ export function ContactSection() {
             Got a question or project in mind? Let&apos;s chat! Reach out through the contact form,
             email, or social media. I&apos;m here to help!
             <div className="h-80 relative">
-              <div className="absolute bg-green-500/20 w-full h-full rounded-full -z-10 blur-3xl motion-reduce:animate-none animate-pulse" />
+              <div className="absolute bg-green-500/25 scale-75 w-full h-full rounded-full -z-10 blur-3xl motion-reduce:animate-none animate-pulse" />
               <Image
                 className="object-center object-contain w-full h-full"
                 width={400}
