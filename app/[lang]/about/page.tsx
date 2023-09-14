@@ -27,7 +27,7 @@ function Description() {
     <section className="my-16">
       <h1 className="text-center sm:text-left mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
         <Image
-          src="/me.png"
+          src="/images/me.png"
           alt="Ricardo Chu photo"
           className="rounded-full block mx-auto mb-3 xs:inline xs:mr-3"
           width="96"
