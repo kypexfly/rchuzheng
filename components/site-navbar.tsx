@@ -15,8 +15,10 @@ import { NavLink } from "./navlink";
 import { ThemeToggler } from "./theme-toggle";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+import LocaleSwitcher from "./locale-switcher";
+import { Locale } from "@/i18n.config";
 
-export function Navbar() {
+export function Navbar({ lang }: { lang: Locale }) {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
@@ -45,16 +47,19 @@ export function Navbar() {
     >
       <div className="container flex justify-between items-center py-4 sm:py-2 sm:px-2">
         <div className="hidden sm:block" />
-        <MobileMenu />
-        <DesktopMenu />
-        <ThemeToggler />
+        <MobileMenu lang={lang} />
+        <DesktopMenu lang={lang} />
+        <div className="flex items-center">
+          <LocaleSwitcher />
+          <ThemeToggler />
+        </div>
       </div>
       <div />
     </motion.header>
   );
 }
 
-function MobileMenu() {
+function MobileMenu({ lang }: { lang: Locale }) {
   return (
     <div className="sm:hidden">
       <NavigationMenu className="justify-start">
@@ -78,7 +83,7 @@ function MobileMenu() {
               <nav className="w-full fixed flex flex-col left-0 top-[61px] bg-background h-screen py-16 text-center">
                 {routes.map((route) => (
                   <Link
-                    href={route.path}
+                    href={`/${lang}/${route.path}`}
                     key={route.path}
                     className="flex p-2"
                     legacyBehavior
@@ -98,14 +103,14 @@ function MobileMenu() {
   );
 }
 
-function DesktopMenu() {
+function DesktopMenu({ lang }: { lang: Locale }) {
   return (
     <div className="hidden sm:flex flex-row justify-between">
       <nav className="border border-border/50 rounded-xl px-4 py-2 bg-background/50">
         <ul className="flex gap-6 [&_a]:font-bold [&_a]:text-sm">
           {routes.map((route) => (
             <li key={route.path}>
-              <NavLink href={route.path}>{route.name}</NavLink>
+              <NavLink href={`/${lang}/${route.path}`}>{route.name}</NavLink>
             </li>
           ))}
         </ul>

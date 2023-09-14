@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@formatjs/intl-localematcher':
+    specifier: ^0.4.2
+    version: 0.4.2
   '@radix-ui/react-aspect-ratio':
     specifier: ^1.0.3
     version: 1.0.3(@types/react-dom@18.2.5)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
@@ -65,6 +68,9 @@ dependencies:
   lucide-react:
     specifier: ^0.244.0
     version: 0.244.0(react@18.2.0)
+  negotiator:
+    specifier: ^0.6.3
+    version: 0.6.3
   next:
     specifier: 13.4.19
     version: 13.4.19(@opentelemetry/api@1.6.0)(react-dom@18.2.0)(react@18.2.0)
@@ -121,6 +127,9 @@ dependencies:
     version: 3.22.2
 
 devDependencies:
+  '@types/negotiator':
+    specifier: ^0.6.1
+    version: 0.6.1
   encoding:
     specifier: ^0.1.13
     version: 0.1.13
@@ -588,6 +597,12 @@ packages:
 
   /@fal-works/esbuild-plugin-global-externals@2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
+    dev: false
+
+  /@formatjs/intl-localematcher@0.4.2:
+    resolution: {integrity: sha512-BGdtJFmaNJy5An/Zan4OId/yR9Ih1OojFjcduX/xOvq798OgWSyDtd6Qd5jqJXwJs1ipe4Fxu9+cshic5Ox2tA==}
+    dependencies:
+      tslib: 2.6.2
     dev: false
 
   /@grpc/grpc-js@1.9.2:
@@ -1576,6 +1591,10 @@ packages:
   /@types/ms@0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: false
+
+  /@types/negotiator@0.6.1:
+    resolution: {integrity: sha512-c4mvXFByghezQ/eVGN5HvH/jI63vm3B7FiE81BUzDAWmuiohRecCO6ddU60dfq29oKUMiQujsoB2h0JQC7JHKA==}
+    dev: true
 
   /@types/node@20.3.1:
     resolution: {integrity: sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==}
@@ -4424,6 +4443,11 @@ packages:
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+    dev: false
+
+  /negotiator@0.6.3:
+    resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
+    engines: {node: '>= 0.6'}
     dev: false
 
   /next-contentlayer@0.3.4(contentlayer@0.3.4)(esbuild@0.17.19)(next@13.4.19)(react-dom@18.2.0)(react@18.2.0):
