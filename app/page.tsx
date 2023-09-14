@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <HeaderSection />
-      <ProjectSection />
+      {/* <ProjectSection /> */}
       <BlogSection />
       <ContactSection />
     </>
