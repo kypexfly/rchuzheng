@@ -33,7 +33,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/devto-clone",
     demo: "https://devclone23.vercel.app",
     tech: ["next", "react-hook-form", "postgresql", "oauth", "mdx", "zod"],
-    cover: "/img/cover-devto-clone.jpg",
+    cover: "/images/cover-devto-clone.jpg",
     highlight: true,
   },
   {
@@ -44,7 +44,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/ai-playground",
     // demo: "https://ai.ricardochu.com",
     tech: ["next", "typescript", "langchain", "ai"],
-    cover: "/img/cover-ai-playground.jpg",
+    cover: "/images/cover-ai-playground.jpg",
     highlight: true,
   },
   {
@@ -54,7 +54,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/cryptoview",
     demo: "https://cryptoview-plus.netlify.app",
     tech: ["react", "express", "plotly", "mongodb", "netlify-functions", "vite"],
-    cover: "/img/cover-cryptoview.jpg",
+    cover: "/images/cover-cryptoview.jpg",
     highlight: true,
   },
   {
@@ -64,7 +64,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/cybertech-ecommerce",
     demo: "https://cybertech-ecommerce.vercel.app",
     tech: ["next", "stripe", "zustand"],
-    cover: "/img/cover-cybertech.jpg",
+    cover: "/images/cover-cybertech.jpg",
     highlight: true,
   },
   {
@@ -74,7 +74,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/currency-converter",
     demo: "https://currency-rcz.vercel.app",
     tech: ["next", "shadcn-ui"],
-    cover: "/img/cover-currency-converter.jpg",
+    cover: "/images/cover-currency-converter.jpg",
     highlight: true,
   },
   {
@@ -84,7 +84,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/ricardochu",
     demo: "https://www.ricardochu.com",
     tech: ["next", "typescript", "tailwind", "contentlayer"],
-    cover: "/img/cover-portfolio.jpg",
+    cover: "/images/cover-portfolio.jpg",
     highlight: true,
   },
   {
@@ -94,7 +94,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/todo-app-ts",
     demo: "https://react-todoapp-ts.netlify.app/",
     tech: ["react", "typescript", "tailwind", "zustand"],
-    cover: "/img/cover-todo-app.jpg",
+    cover: "/images/cover-todo-app.jpg",
     highlight: true,
   },
   {
@@ -104,7 +104,7 @@ export const projectList: Project[] = [
     source: "https://github.com/kypexfly/epic7index",
     demo: "https://epic7index.netlify.app",
     tech: ["react", "typescript", "tailwindcss"],
-    cover: "/img/cover-epic7index.jpg",
+    cover: "/images/cover-epic7index.jpg",
     highlight: true,
   },
   {

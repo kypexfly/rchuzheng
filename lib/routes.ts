@@ -14,7 +14,7 @@ export const routes: Route[] = [
     name: "Blog",
   },
   {
-    path: "/me",
+    path: "/about",
     name: "About",
   },
 ];

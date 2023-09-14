@@ -69,7 +69,7 @@ export function ContactSection() {
                 className="object-center object-contain w-full h-full"
                 width={400}
                 height={400}
-                src="/contact-vr.png"
+                src="/images/contact-vr.png"
                 alt=""
               />
             </div>
