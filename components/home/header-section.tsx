@@ -9,7 +9,6 @@ import { buttonVariants } from "../ui/button";
 import { motion } from "framer-motion";
 import { socialList } from "@/data";
 import { cn } from "@/lib/utils";
-import Marquee from "react-fast-marquee";
 
 export function HeaderSection() {
   return (
@@ -54,7 +53,10 @@ export function HeaderSection() {
             className="hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center"
           >
             {socialList.map((s) => (
-              <li key={s.label} className="hover:text-foreground hover:scale-125 transition-all ease-in-out text-muted-foreground">
+              <li
+                key={s.label}
+                className="hover:text-foreground hover:scale-125 transition-all ease-in-out text-muted-foreground"
+              >
                 <a
                   href={s.url}
                   target="_blank"
@@ -69,20 +71,6 @@ export function HeaderSection() {
             <div className="w-[1px] h-full bg-gradient-to-t from-transparent to-muted-foreground" />
           </motion.ul>
         </div>
-
-        <Marquee className="mt-9" gradient speed={50} autoFill>
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=ts" alt="TypeScript" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=react" alt="React.js" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=js" alt="JavaScript" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=mongo" alt="MongoDB" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=tailwind" alt="TailwindCSS" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=prisma" alt="PrismaORM" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=redux" alt="RTK" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=graphql" alt="GraphQL" />
-        </Marquee>
       </StaggerAnimateInView>
     </header>
   );
