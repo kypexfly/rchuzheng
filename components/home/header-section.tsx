@@ -2,12 +2,14 @@
 
 /* eslint-disable @next/next/no-img-element */
 
+import { Balancer } from "react-wrap-balancer";
 import { Icons } from "../icons";
 import { StaggerAnimateInView, fadeInLeft, fadeInRight } from "../stagger-animate";
 import { buttonVariants } from "../ui/button";
 import { motion } from "framer-motion";
 import { socialList } from "@/data";
 import { cn } from "@/lib/utils";
+import clsx from "clsx";
 
 export function HeaderSection() {
   return (
@@ -24,12 +26,11 @@ export function HeaderSection() {
           FullStack Developer
         </motion.h2>
 
-        {/* Text wrap is not supported yet.  */}
-        {/*@ts-ignore */}
-        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed" style={{ textWrap: "balance" }}>
-          I have over 2 years of experience in web development, where I have worked extensively with
-          React, Typescript, and Node.js, among other technologies. Attention to detail, UX and
-          performance.
+        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+          <Balancer>
+            I bring ideas to life through code and creativity, crafting modern web applications with
+            attention to detail, UX, and performance.
+          </Balancer>
         </p>
 
         <div className="flex gap-2 justify-center mt-4">
@@ -49,7 +50,10 @@ export function HeaderSection() {
 
           <motion.ul
             variants={fadeInRight}
-            className="hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center"
+            className={clsx(
+              "hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center",
+              "after:w-[1px] after:h-full after:bg-gradient-to-t after:from-transparent after:to-muted-foreground after:mt-3"
+            )}
           >
             {socialList.map((s) => (
               <li
@@ -67,7 +71,6 @@ export function HeaderSection() {
                 </a>
               </li>
             ))}
-            <div className="w-[1px] h-full bg-gradient-to-t from-transparent to-muted-foreground" />
           </motion.ul>
         </div>
       </StaggerAnimateInView>
