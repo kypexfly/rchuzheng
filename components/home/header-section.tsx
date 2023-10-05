@@ -2,7 +2,6 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { Balancer } from "react-wrap-balancer";
 import { Icons } from "../icons";
 import { StaggerAnimateInView, fadeInLeft, fadeInRight } from "../stagger-animate";
 import { buttonVariants } from "../ui/button";
@@ -25,12 +24,12 @@ export function HeaderSection() {
           FullStack Developer
         </motion.h2>
 
-        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed">
-          <Balancer>
-            I have over 2 years of experience in web development, where I have worked extensively
-            with React, Typescript, and Node.js, among other technologies. Attention to detail, UX
-            and performance.
-          </Balancer>
+        {/* Text wrap is not supported yet.  */}
+        {/*@ts-ignore */}
+        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed" style={{ textWrap: "balance" }}>
+          I have over 2 years of experience in web development, where I have worked extensively with
+          React, Typescript, and Node.js, among other technologies. Attention to detail, UX and
+          performance.
         </p>
 
         <div className="flex gap-2 justify-center mt-4">
