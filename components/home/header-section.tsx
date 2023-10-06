@@ -9,7 +9,9 @@ import { buttonVariants } from "../ui/button";
 import { motion } from "framer-motion";
 import { socialList } from "@/data";
 import { cn } from "@/lib/utils";
+import clsx from "clsx";
 import Marquee from "react-fast-marquee";
+import { SkillIcons } from "../skill-icons";
 
 export function HeaderSection() {
   return (
@@ -26,11 +28,10 @@ export function HeaderSection() {
           FullStack Developer
         </motion.h2>
 
-        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
           <Balancer>
-            I have over 2 years of experience in web development, where I have worked extensively
-            with React, Typescript, and Node.js, among other technologies. Attention to detail, UX
-            and performance.
+            I bring ideas to life through code and creativity, crafting modern web applications with
+            attention to detail, UX, and performance.
           </Balancer>
         </p>
 
@@ -51,10 +52,16 @@ export function HeaderSection() {
 
           <motion.ul
             variants={fadeInRight}
-            className="hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center"
+            className={clsx(
+              "hidden absolute top-0 right-0 space-y-3 h-full px-2 md:flex flex-col items-center",
+              "after:w-[1px] after:h-full after:bg-gradient-to-t after:from-transparent after:to-muted-foreground after:mt-3"
+            )}
           >
             {socialList.map((s) => (
-              <li key={s.label} className="hover:text-foreground hover:scale-125 transition-all ease-in-out text-muted-foreground">
+              <li
+                key={s.label}
+                className="hover:text-foreground hover:scale-125 transition-all ease-in-out text-muted-foreground"
+              >
                 <a
                   href={s.url}
                   target="_blank"
@@ -66,23 +73,17 @@ export function HeaderSection() {
                 </a>
               </li>
             ))}
-            <div className="w-[1px] h-full bg-gradient-to-t from-transparent to-muted-foreground" />
           </motion.ul>
         </div>
 
-        <Marquee className="mt-9" gradient speed={50} autoFill>
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=ts" alt="TypeScript" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=react" alt="React.js" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=js" alt="JavaScript" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=mongo" alt="MongoDB" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=tailwind" alt="TailwindCSS" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=prisma" alt="PrismaORM" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=redux" alt="RTK" />
-          <img className="mx-2" width={36} height={36} src="https://skillicons.dev/icons?i=graphql" alt="GraphQL" />
-        </Marquee>
+        <div className="mt-9" style={{ height: 36 }}>
+          <Marquee gradient speed={30} autoFill pauseOnHover>
+            {Object.entries(SkillIcons).map((s) => {
+              const [name, Icon] = s;
+              return <Icon key={name} title={name} className="mx-2 w-9 h-9" />;
+            })}
+          </Marquee>
+        </div>
       </StaggerAnimateInView>
     </header>
   );

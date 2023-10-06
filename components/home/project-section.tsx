@@ -21,7 +21,7 @@ export function ProjectSection() {
           .slice(0, 6)
           .map((project, i) => (
             <StaggerAnimateInView key={project.title} variants={fadeInLeft} viewport={{once: true, amount: 0.1}}>
-              <ProjectCard showCover {...project} index={i} />
+              <ProjectCard {...project} index={i} />
             </StaggerAnimateInView>
           ))}
       </div>
