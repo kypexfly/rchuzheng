@@ -79,5 +79,6 @@
 }
 
 .light .rfm-overlay, .dark .rfm-overlay {
+  @apply pointer-events-none;
   --gradient-color: hsl(var(--background) / 1), hsl(var(--background) / 0) !important;
 }

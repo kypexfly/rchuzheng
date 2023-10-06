@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 import { socialList } from "@/data";
 import { cn } from "@/lib/utils";
 import clsx from "clsx";
+import Marquee from "react-fast-marquee";
+import { SkillIcons } from "../skill-icons";
 
 export function HeaderSection() {
   return (
@@ -72,6 +74,15 @@ export function HeaderSection() {
               </li>
             ))}
           </motion.ul>
+        </div>
+
+        <div className="mt-9" style={{ height: 36 }}>
+          <Marquee gradient speed={30} autoFill pauseOnHover>
+            {Object.entries(SkillIcons).map((s) => {
+              const [name, Icon] = s;
+              return <Icon key={name} title={name} className="mx-2 w-9 h-9" />;
+            })}
+          </Marquee>
         </div>
       </StaggerAnimateInView>
     </header>
