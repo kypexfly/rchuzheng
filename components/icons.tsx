@@ -7,6 +7,7 @@ import {
   Mail,
   Menu2,
   Moon,
+  Send,
   Sun,
   X,
 } from "tabler-icons-react";
@@ -22,4 +23,5 @@ export const Icons = {
   telegram: BrandTelegram,
   mail: Mail,
   back: ChevronLeft,
+  send: Send,
 };
