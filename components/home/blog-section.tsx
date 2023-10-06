@@ -19,7 +19,7 @@ export function BlogSection() {
       </h2>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        {posts.slice(0, 7).map((post) => (
+        {posts.slice(0, 4).map((post) => (
           <StaggerAnimateInView key={post.title} variants={fadeInLeft}>
             <PostCard {...post} />
           </StaggerAnimateInView>
