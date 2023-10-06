@@ -1,7 +1,5 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import { Balancer } from "react-wrap-balancer";
 import { Icons } from "../icons";
 import { StaggerAnimateInView, fadeInLeft, fadeInRight } from "../stagger-animate";
@@ -14,6 +12,7 @@ import Marquee from "react-fast-marquee";
 import { SkillIcons } from "../skill-icons";
 
 export function HeaderSection() {
+  const CV_URL = process.env.NEXT_PUBLIC_CV_URL ?? "/#";
   return (
     <header className="text-center mt-16 relative overflow-x-hidden container py-4 sm:py-8 sm:px-8">
       <StaggerAnimateInView className="max-w-2xl mx-auto container">
@@ -41,7 +40,7 @@ export function HeaderSection() {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1QUC9P8ZYpSCGvAPiYXM_bRs5Bx5W_LCJ/view?usp=sharing"
+            href={CV_URL}
             className={buttonVariants({ variant: "link" })}
             target="_blank"
             rel="noopener noreferrer"
