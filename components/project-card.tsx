@@ -61,9 +61,8 @@ export default function ProjectCard({
             className="object-cover"
             alt={`${title} image preview`}
             src={cover!}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            quality={100}
-            priority={index === 0} // only show the first card as priority
+            sizes="(max-width: 768px) 85vw, (max-width: 1024px) 45vw, 300px"
+            priority={index === 0} // only load the first image as priority for mobile
           />
         </AspectRatio>
       )}
