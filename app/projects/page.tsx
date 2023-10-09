@@ -12,10 +12,13 @@ export default function Projects() {
   return (
     <>
       <section className="container sm:px-8 sm:py-6 my-16">
+
+        <h1 className="sr-only">Projects</h1>
+
         <header className="text-center sm:text-left my-8">
-          <h1 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
+          <h2 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
             <span className="text-gradient-flame">Featured</span> Projects
-          </h1>
+          </h2>
           <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
             <Balancer>
               Projects to showcase my experience in web development, utilizing frameworks and best
@@ -35,9 +38,9 @@ export default function Projects() {
 
       <section className="container my-16">
         <header className="text-center sm:text-left my-8">
-          <h1 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">
+          <h2 className="mb-6 text-gray-800 dark:text-white text-3xl font-bold tracking-tight sm:text-3xl">
             Other Projects
-          </h1>
+          </h2>
         </header>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

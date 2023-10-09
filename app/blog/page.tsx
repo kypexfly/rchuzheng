@@ -13,10 +13,12 @@ export default function Blog() {
 
   return (
     <section className="container sm:py-6 sm:px-8 my-16">
+      <h1 className="sr-only">Blog</h1>
+
       <header className="text-center sm:text-left my-8">
-        <h1 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
+        <h2 className="mb-6 text-gray-800 dark:text-white text-5xl font-bold tracking-tight">
           <span className="text-gradient-flame">Blog</span> Posts
-        </h1>
+        </h2>
         <p className="max-w-prose mb-10 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
           <Balancer>
             Sharing insights and experiences on various topics like software development, machine
