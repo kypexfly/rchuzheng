@@ -30,7 +30,7 @@ export function HeaderSection() {
         <p className="mb-3 text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
           <Balancer>
             I bring ideas to life through code and creativity, crafting modern web applications with
-            attention to detail, UX, and performance.
+            attention to detail, UX and performance.
           </Balancer>
         </p>
 
