@@ -1,4 +1,5 @@
 import {
+  ArrowUp,
   BrandGithub,
   BrandLinkedin,
   BrandTelegram,
@@ -24,4 +25,5 @@ export const Icons = {
   mail: Mail,
   back: ChevronLeft,
   send: Send,
+  up: ArrowUp,
 };

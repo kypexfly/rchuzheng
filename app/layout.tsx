@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Metadata } from "next";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main>{children}</main>
+          <ScrollToTop />
           <Footer />
           <Analytics />
         </ThemeProvider>
