@@ -62,7 +62,7 @@ export default function ProjectCard({
             alt={`${title} image preview`}
             src={cover!}
             sizes="(max-width: 768px) 85vw, (max-width: 1024px) 45vw, 300px"
-            priority={index === 0} // only load the first image as priority for mobile
+            priority={Number.isInteger(index) ? index! < 3 : false} // only load the first 3 images as priority for mobile/desktop
           />
         </AspectRatio>
       )}

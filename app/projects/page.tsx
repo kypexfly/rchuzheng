@@ -12,7 +12,6 @@ export default function Projects() {
   return (
     <>
       <section className="container sm:px-8 sm:py-6 my-16">
-
         <h1 className="sr-only">Projects</h1>
 
         <header className="text-center sm:text-left my-8">
@@ -30,8 +29,8 @@ export default function Projects() {
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projectList
             .filter((p) => p.highlight)
-            .map((project) => (
-              <ProjectCard showCover key={project.title} {...project} />
+            .map((project, index) => (
+              <ProjectCard showCover key={project.title} index={index} {...project} />
             ))}
         </div>
       </section>
