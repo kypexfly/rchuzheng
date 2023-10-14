@@ -1,5 +1,5 @@
 import { EmailTemplate } from "@/components/email-template";
-import { ContactFormSchema } from "@/lib/validators";
+import { ContactSchema } from "@/lib/validators";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, message } = ContactFormSchema.parse(body);
+    const { name, email, message } = ContactSchema.parse(body);
 
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
