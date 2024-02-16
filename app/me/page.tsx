@@ -40,7 +40,7 @@ function Description() {
       </p>
 
       <p className="max-w-prose mb-8 font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-        I&apos;m a 23-year-old Web Developer. From a young age, I have been fascinated by the
+        I&apos;m a 24-year-old Web Developer. From a young age, I have been fascinated by the
         intricacies of web development, exploring programming languages such as Javascript, Python
         and MATLAB/R for scientific and engineering applications.
       </p>
@@ -142,7 +142,7 @@ function Education() {
         <li className="mb-10 ml-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 bg-primary"></div>
           <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-500">
-            March 2023 - Present
+            March 2023 - December 2023
           </time>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Backend with Java</h3>
           <p className="mb-4 max-w-prose font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
